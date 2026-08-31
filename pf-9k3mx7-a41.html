@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Portafoglio v8</title>
+<title>Portafoglio v9</title>
 <style>
 :root{
   --bg:#0e1116; --panel:#161b22; --panel2:#1c232c; --line:#2a323d;
@@ -130,7 +130,7 @@ tr.tot .p2{color:inherit;opacity:.85}
 <body>
 
 <header>
-  <h1>Portafoglio <span style="font-size:11px;color:#6e7681;font-weight:400">v8</span></h1>
+  <h1>Portafoglio <span style="font-size:11px;color:#6e7681;font-weight:400">v9</span></h1>
   <div class="sub" id="sub">5 posizioni &middot; 50.710 &euro; investiti</div>
   <nav>
     <button class="on" data-t="pf">Posizioni</button>
@@ -362,89 +362,8 @@ function draw(){
   }
 }
 
-function tryFetch(url){
-  var enc=encodeURIComponent(url);
-  var alt=url.replace('query1.','query2.');
-  var routes=[url, alt,
-    'https://api.codetabs.com/v1/proxy?quest='+enc,
-    'https://api.allorigins.win/raw?url='+enc,
-    'https://corsproxy.io/?'+enc,
-    'https://thingproxy.freeboard.io/fetch/'+url];
-  var i=0;
-  function next(){
-    if(i>=routes.length) return Promise.reject(new Error('vie bloccate'));
-    var r=routes[i++];
-    return fetch(r,{cache:'no-store'}).then(function(x){
-      if(!x.ok) throw new Error('HTTP '+x.status); return x.text();
-    }).then(function(t){
-      if(!t||t.length<10) throw new Error('vuoto');
-      if(t.indexOf('"chart"')<0) throw new Error('non e JSON Yahoo');
-      return t;
-    })['catch'](function(){ return next(); });
-  }
-  return next();
-}
-
 var DIAG=[];
-
-function metaOf(txt){
-  var j=JSON.parse(txt);
-  var r=j&&j.chart&&j.chart.result&&j.chart.result[0];
-  if(!r||!r.meta) throw new Error('struttura inattesa');
-  var m=r.meta;
-  var p=m.regularMarketPrice;
-  if(typeof p!=='number'||!(p>0)) throw new Error('prezzo assente');
-  return {p:p, t:(m.regularMarketTime||0), st:(m.marketState||''), cur:(m.currency||'')};
-}
-
-var STOOQ={'PRY.MI':'pry.it','HO.PA':'ho.fr','AMZN':'amzn.us','NFLX':'nflx.us',
-           'AZN':'azn.us','EURUSD=X':'eurusd'};
-
-function viaStooq(sym){
-  var sq=STOOQ[sym]; if(!sq) return Promise.resolve(null);
-  var u='https://stooq.com/q/l/?s='+sq+'&f=sd2t2ohlcv&h&e=csv&_='+Date.now();
-  var enc=encodeURIComponent(u);
-  var vie=['https://api.codetabs.com/v1/proxy?quest='+enc,
-           'https://api.allorigins.win/raw?url='+enc];
-  var i=0;
-  function next(){
-    if(i>=vie.length) return Promise.resolve(null);
-    return fetch(vie[i++],{cache:'no-store'}).then(function(x){return x.text();})
-      .then(function(t){
-        var r=t.trim().split(/\r?\n/); if(r.length<2) throw 0;
-        var hd=r[0].toLowerCase().split(','), c=r[1].split(',');
-        var iC=hd.indexOf('close'), iD=hd.indexOf('date'), iT=hd.indexOf('time');
-        var v=parseFloat(c[iC]); if(isNaN(v)||v<=0) throw 0;
-        var ep=Math.floor(Date.parse((c[iD]||'')+'T'+(c[iT]||'00:00:00')+'Z')/1000)||0;
-        return {p:v, t:ep, st:'', cur:''};
-      })['catch'](function(){ return next(); });
-  }
-  return next();
-}
-
-function grab(sym){
-  var u='https://query1.finance.yahoo.com/v8/finance/chart/'
-       +encodeURIComponent(sym)+'?range=1d&interval=1m&_='+Date.now();
-  return tryFetch(u).then(function(txt){ return metaOf(txt); })
-    ['catch'](function(){ return viaStooq(sym); })
-    ['catch'](function(){ return null; })
-    .then(function(r){
-      if(!r) DIAG.push(sym+': nessuna fonte raggiungibile');
-      return r||null;
-    });
-}
-
-function inFila(syms){
-  var out=[], i=0;
-  function step(){
-    if(i>=syms.length) return Promise.resolve(out);
-    return grab(syms[i]).then(function(r){
-      out[i]=r; i++;
-      return new Promise(function(rs){setTimeout(rs,350);}).then(step);
-    });
-  }
-  return step();
-}
+var STATO={ok:0,bad:[],vuoto:false,ora:'\u2014'};
 
 function quando(ep){
   if(!ep) return '';
@@ -452,9 +371,6 @@ function quando(ep){
   return d.toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'})+' '
        + d.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
 }
-
-var STATO={ok:0,bad:[],vuoto:false,ora:'\u2014'};
-
 function orario(){
   var d=new Date();
   return ('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2)
@@ -469,19 +385,14 @@ function segnala(){
     st.className='mini';
     st.innerHTML=STATO.ok+' su '+POS.length+' aggiornati \u00b7 '
       +'<span class="lnk" onclick="mostraDett()">dettagli</span>';
-  } else {
-    st.className='mini'; st.innerHTML='ultimo controllo '+STATO.ora;
-  }
+  } else { st.className='mini'; st.innerHTML='ultimo controllo '+STATO.ora; }
 }
-
 function esito(ok,bad){
   STATO={ok:ok,bad:bad,vuoto:(ok===0),ora:orario()};
   var dt=document.getElementById('dett');
   if(ok===0){
-    dt.innerHTML='<b>Prezzi non scaricati</b>'
-      +'I valori mostrati restano quelli dell\'ultimo aggiornamento riuscito. '
-      +'Se stai usando l\'anteprima dentro un\'app, prova ad aprire il file con Safari: '
-      +'le anteprime bloccano le richieste verso l\'esterno.';
+    dt.innerHTML='<b>Prezzi non disponibili</b>'
+      +'Il file prezzi.json non risponde. I valori mostrati sono gli ultimi noti.';
     dt.className='dett on';
   } else if(bad.length){
     dt.innerHTML='<b>Non aggiornati: '+bad.join(', ')+'</b>'+DIAG.join('<br>');
@@ -489,46 +400,36 @@ function esito(ok,bad){
   } else { dt.className='dett'; dt.innerHTML=''; }
   segnala();
 }
-
 function mostraDett(){
   var d=document.getElementById('dett');
   d.className = (d.className.indexOf('on')>=0) ? 'dett' : 'dett on';
 }
 
 document.getElementById('go').addEventListener('click',function(){
-  var btn=this, st=document.getElementById('stat');
+  var btn=this;
   if(btn.dataset.busy==='1') return;
-  btn.dataset.busy='1';
-  st.className='hush'; st.textContent=''; DIAG=[];
-  document.getElementById('dett').className='dett';
+  btn.dataset.busy='1'; DIAG=[];
 
-  var syms=[];
-  for(var i=0;i<POS.length;i++) syms.push(symOf(POS[i]));
-  syms.push('EURUSD=X');
-
-  inFila(syms).then(function(res){
-    var ok=0, bad=[];
-    if(!S.__ts) S.__ts={};
-    for(var i=0;i<POS.length;i++){
-      if(res[i]){
-        S[POS[i].t]=Math.round(res[i].p*10000)/10000;
-        S.__ts[POS[i].t]={t:res[i].t, st:res[i].st, got:Date.now()};
-        ok++;
-      } else bad.push(POS[i].t);
-    }
-    var f=res[POS.length];
-    if(f){ S.__fx=Math.round(f.p*10000)/10000;
-           S.__fxt=f.t;
-           document.getElementById('fx').value=S.__fx; }
-    save(); draw();
-
-    esito(ok,bad);
-  })['catch'](function(){
-    esito(0,[]);
-  }).then(function(){
-    btn.dataset.busy='';
-    segnala();
-  });
+  fetch('prezzi.json?_='+Date.now(),{cache:'no-store'})
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(function(j){
+      var q=j.prezzi||{}, ok=0, bad=[];
+      if(!S.__ts) S.__ts={};
+      for(var i=0;i<POS.length;i++){
+        var p=POS[i], v=q[symOf(p)];
+        if(v && v.p>0){
+          S[p.t]=v.p;
+          S.__ts[p.t]={t:v.t, st:v.st, got:Date.now()};
+          ok++;
+        } else { bad.push(p.t); DIAG.push(symOf(p)+': assente nel file'); }
+      }
+      var f=q['EURUSD=X'];
+      if(f && f.p>0){ S.__fx=f.p; S.__fxt=f.t;
+        document.getElementById('fx').value=f.p; }
+      save(); draw(); esito(ok,bad);
+    })['catch'](function(e){
+      DIAG.push('prezzi.json: '+e.message); esito(0,[]);
+    }).then(function(){ btn.dataset.busy=''; });
 });
 
 var sy=document.getElementById('syms'),sh='';
