@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Portafoglio v9</title>
+<title>Portafoglio v10</title>
 <style>
 :root{
   --bg:#0e1116; --panel:#161b22; --panel2:#1c232c; --line:#2a323d;
@@ -131,7 +131,7 @@ tr.tot .p2{color:inherit;opacity:.85}
 
 <header>
   <h1>Portafoglio <span style="font-size:11px;color:#6e7681;font-weight:400">v9</span></h1>
-  <div class="sub" id="sub">5 posizioni &middot; 50.710 &euro; investiti</div>
+  <div class="sub" id="sub">6 posizioni &middot; 54.638 &euro; investiti</div>
   <nav>
     <button class="on" data-t="pf">Posizioni</button>
     <button data-t="te">Tesi e uscite</button>
@@ -163,8 +163,8 @@ tr.tot .p2{color:inherit;opacity:.85}
   </div>
 
   <div class="grid3">
-    <div class="mini"><div class="lab">Speso</div><div class="val">50.710 &euro;</div>
-      <div class="sm">13&ndash;21/08</div></div>
+    <div class="mini"><div class="lab">Speso</div><div class="val">54.638 &euro;</div>
+      <div class="sm">13&ndash;31/08</div></div>
     <div class="mini"><div class="lab">Vale ora</div><div class="val" id="mnow">&mdash;</div>
       <div class="sm" id="mnowd">&mdash;</div></div>
     <div class="mini"><div class="lab">P&amp;L</div><div class="val" id="mpl">&mdash;</div>
@@ -228,10 +228,11 @@ var POS=[
  {t:"Amazon",m:"Nasdaq",n:50,c:233.52,cur:"USD",v:11676,cu:270.883,sym:"AMZN",px0:266.43,nota:"28/08 22:00",dt:"17/08"},
  {t:"Thales",m:"Parigi",n:40,c:277.775,cur:"EUR",v:11111,sym:"HO.PA",px0:246.30,nota:"28/08 16:22",dt:"13/08"},
  {t:"Netflix",m:"Nasdaq",n:125,c:68.744,cur:"USD",v:8593,cu:80.430,sym:"NFLX",px0:81.72,nota:"28/08 22:00",dt:"20/08"},
- {t:"AstraZeneca",m:"NYSE",n:50,c:138.10,cur:"USD",v:6905,cu:160.196,sym:"AZN",px0:162.70,nota:"28/08 22:00",dt:"17/08"}
+ {t:"AstraZeneca",m:"NYSE",n:50,c:138.10,cur:"USD",v:6905,cu:160.196,sym:"AZN",px0:162.70,nota:"28/08 22:00",dt:"17/08"},
+ {t:"Trivago",m:"Nasdaq",n:750,c:5.238,cur:"USD",v:3928,cu:6.0667,sym:"TRVG",px0:6.0667,nota:"31/08 carico",dt:"31/08"}
 ];
 var FX0=1.1583;
-var INV=50710;
+var INV=54638;
 
 var TESI=[
  {t:"Prysmian",d:"Elettrificazione delle reti e data center. Guidance 2026 alzata a 2,85 mld di EBITDA, leva bassa a 0,8x, ROE 22,7%, PEG 0,28. Digital Solutions al 24% di margine, capacit&agrave; USA in raddoppio entro il 2029.",
@@ -248,7 +249,10 @@ var TESI=[
   n:"Agli atti: comprata di mia iniziativa il 20 agosto, prima dell'analisi del 31. Ackman era gi&agrave; rientrato, la decisione non dipende da lui. Punto debole: il 5% del budget contenuti va a sport ed eventi dal vivo che generano l'1% delle ore viste."},
  {t:"AstraZeneca",d:"Oncologia +15%. Ricavi semestrali +6%, ma +11% escludendo Farxiga e Brilinta. Margine lordo core all'83%, oltre trenta approvazioni da fine 2025, ambizione 80 mld di ricavi entro il 2030.",
   e:"Tagrisso: la linea di ricavi pi&ugrave; preziosa del gruppo e la pi&ugrave; esposta alla scadenza brevettuale.",
-  n:"Peso sottopesato deliberatamente perch&eacute; la big pharma mi d&agrave; fastidio come categoria. &Egrave; una ragione caratteriale, non un'analisi. Se un giorno vorr&ograve; uscire devo distinguere: uscire perch&eacute; Tagrisso cede &egrave; un dato, uscire perch&eacute; il settore mi infastidisce non &egrave; informazione nuova."}
+  n:"Peso sottopesato deliberatamente perch&eacute; la big pharma mi d&agrave; fastidio come categoria. &Egrave; una ragione caratteriale, non un'analisi. Se un giorno vorr&ograve; uscire devo distinguere: uscire perch&eacute; Tagrisso cede &egrave; un dato, uscire perch&eacute; il settore mi infastidisce non &egrave; informazione nuova."},
+ {t:"Trivago",d:"Risanamento aziendale confermato, non Rocket Stock. Sesto trimestre consecutivo di crescita a doppia cifra (ricavi Q2 168,4 mln contro 161,78 attesi), ritorno a EBITDA rettificato positivo, guidance 2026 alzata a met&agrave; della doppia cifra. Cassa 155 mln senza debito. Target degli analisti alzati dopo la trimestrale (B.Riley 6&rarr;8, Susquehanna 3,25&rarr;5,50, UBS 3,40&rarr;6): comprata sotto la media dei target.",
+  e:"Crescita dei ricavi sotto il 10% per due trimestri consecutivi, oppure EBITDA rettificato di nuovo negativo.",
+  n:"Posizione satellite, orizzonte 3 anni (non 1). 750 azioni, 4.550 $ commissioni incluse, carico medio 6,07 $. Punto debole strutturale: schiacciata fra Google (traffico) ed Expedia (azionista di controllo e cliente); crescita attesa a 3 anni 7,9% contro 16% del settore. Short interest quasi nullo &mdash; nessuno squeeze possibile, il rendimento dipende solo dall'esecuzione."}
 ];
 
 var REGOLE=[
@@ -258,7 +262,7 @@ var REGOLE=[
  ["Rendimento atteso","7-9% annuo, non 10-12%. Nessuno di questi titoli &egrave; stato comprato a sconto: &egrave; il limite noto di questo portafoglio."],
  ["Copertura non progettata","Thales e Prysmian si muovono in direzioni opposte su uno scenario di pace in Ucraina. Non era voluto, ma va saputo."],
  ["Ricerca nuovi titoli","Prima si verificano prezzo e data di chiusura, poi si decide se parlarne. Il filtro sta a monte, non a valle."],
- ["Screener Finviz","52-Week High = New High &middot; SMA50 e SMA200 = price above &middot; Industry = Stocks only &middot; Market Cap = under 10 bln &middot; Price = over 5 &middot; Average Volume = over 100K. Rel Volume e Signal funzionano solo a mercato aperto, mai in premercato."]
+ ["Screener Finviz","52-Week High = New High &middot; SMA50 e SMA200 = price above &middot; Industry = Stocks only &middot; Market Cap = under 6 mld $ (aggiornato il 31/8, era 4 mld: il confine Russell small/large cap &egrave; salito a 5,7 mld) &middot; Price = over 5 &middot; Average Volume = over 100K. Rel Volume e Signal funzionano solo a mercato aperto, mai in premercato."]
 ];
 
 var S={};
@@ -316,7 +320,7 @@ function draw(){
   var has=(manca===0);
   var tpl=tot-INV,tplp=tpl/INV*100;
   h+='<tr class="tot"><td>TOTALE</td><td>360</td>'
-    +'<td><span class="p1">'+eu(INV)+' \u20ac</span><span class="p3">13&ndash;21/08</span></td>'
+    +'<td><span class="p1">'+eu(INV)+' \u20ac</span><span class="p3">13&ndash;31/08</span></td>'
     +'<td><span class="p1">'+eu(tot)+' \u20ac</span><span class="p3">28/08</span></td>'
     +'<td class="'+(has?((tpl>=0)?'pos':'neg'):'wr')+'">'
     +'<span class="p1">'+(tpl>=0?'+':'')+eu(tpl)+' \u20ac</span>'
