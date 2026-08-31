@@ -1,0 +1,82 @@
+name: Prezzi
+
+on:
+  schedule:
+    - cron: '*/10 7-22 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Scarica le quotazioni
+        run: |
+          python3 - << 'EOF'
+          import json, time, urllib.request, urllib.error
+
+          SIMBOLI = ["PRY.MI", "HO.PA", "AMZN", "NFLX", "AZN", "EURUSD=X"]
+          UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                              "AppleWebKit/537.36 (KHTML, like Gecko) "
+                              "Chrome/122.0 Safari/537.36"}
+
+          def yahoo(sym):
+              for host in ("query1", "query2"):
+                  url = ("https://%s.finance.yahoo.com/v8/finance/chart/%s"
+                         "?range=1d&interval=1m" % (host, urllib.parse.quote(sym)))
+                  try:
+                      req = urllib.request.Request(url, headers=UA)
+                      with urllib.request.urlopen(req, timeout=20) as r:
+                          j = json.load(r)
+                      m = j["chart"]["result"][0]["meta"]
+                      p = m.get("regularMarketPrice")
+                      if isinstance(p, (int, float)) and p > 0:
+                          return {"p": round(float(p), 4),
+                                  "t": int(m.get("regularMarketTime") or 0),
+                                  "st": m.get("marketState", ""),
+                                  "cur": m.get("currency", "")}
+                  except Exception as e:
+                      print(sym, host, "->", e)
+                  time.sleep(1)
+              return None
+
+          import urllib.parse
+          fuori = {}
+          for s in SIMBOLI:
+              r = yahoo(s)
+              if r:
+                  fuori[s] = r
+                  print("ok", s, r["p"])
+              else:
+                  print("FALLITO", s)
+              time.sleep(1.5)
+
+          if not fuori:
+              raise SystemExit("nessun prezzo scaricato")
+
+          # conserva i valori precedenti per i simboli non riusciti
+          try:
+              with open("prezzi.json") as f:
+                  vecchio = json.load(f).get("prezzi", {})
+              for k, v in vecchio.items():
+                  fuori.setdefault(k, v)
+          except Exception:
+              pass
+
+          with open("prezzi.json", "w") as f:
+              json.dump({"aggiornato": int(time.time()), "prezzi": fuori},
+                        f, indent=1, ensure_ascii=False)
+          print("scritti", len(fuori), "simboli")
+          EOF
+
+      - name: Salva nel repository
+        run: |
+          git config user.name "prezzi-bot"
+          git config user.email "prezzi-bot@users.noreply.github.com"
+          git add prezzi.json
+          git diff --staged --quiet || git commit -m "prezzi $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
