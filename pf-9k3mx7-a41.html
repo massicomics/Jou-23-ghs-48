@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Portafoglio v11</title>
+<title>Portafoglio v12</title>
 <style>
 :root{
   --bg:#0e1116; --panel:#161b22; --panel2:#1c232c; --line:#2a323d;
@@ -131,7 +131,7 @@ tr.tot .p2{color:inherit;opacity:.85}
 
 <header>
   <h1>Portafoglio <span style="font-size:11px;color:#6e7681;font-weight:400">v9</span></h1>
-  <div class="sub" id="sub">7 posizioni &middot; 58.660 &euro; investiti</div>
+  <div class="sub" id="sub">6 posizioni &middot; 47.549 &euro; investiti</div>
   <nav>
     <button class="on" data-t="pf">Posizioni</button>
     <button data-t="te">Tesi e uscite</button>
@@ -163,7 +163,7 @@ tr.tot .p2{color:inherit;opacity:.85}
   </div>
 
   <div class="grid3">
-    <div class="mini"><div class="lab">Speso</div><div class="val">58.660 &euro;</div>
+    <div class="mini"><div class="lab">Speso</div><div class="val">47.549 &euro;</div>
       <div class="sm">13&ndash;31/08</div></div>
     <div class="mini"><div class="lab">Vale ora</div><div class="val" id="mnow">&mdash;</div>
       <div class="sm" id="mnowd">&mdash;</div></div>
@@ -185,7 +185,7 @@ tr.tot .p2{color:inherit;opacity:.85}
       </tr></thead>
       <tbody id="tb"></tbody>
     </table>
-    <div class="hint">Prezzi nella valuta di quotazione: Prysmian e Thales in euro, Amazon Netflix e AstraZeneca in dollari. Puoi sempre scriverli a mano sovrascrivendo quelli scaricati.</div>
+    <div class="hint">Prezzi nella valuta di quotazione: Prysmian in euro, Amazon Netflix e AstraZeneca in dollari. Puoi sempre scriverli a mano sovrascrivendo quelli scaricati.</div>
   </div>
 
   <div style="text-align:center"><button class="btn2" id="rst">Azzera i prezzi inseriti</button></div>
@@ -195,7 +195,7 @@ tr.tot .p2{color:inherit;opacity:.85}
     <div class="cal"><span>Prysmian &middot; Q3</span><span>fine ottobre</span></div>
     <div class="cal"><span>Amazon &middot; Q3</span><span>fine ottobre</span></div>
     <div class="cal"><span>Netflix &middot; Q3</span><span>fine ottobre</span></div>
-    <div class="cal"><span>Thales &middot; ordini Q3</span><span>ottobre</span></div>
+    <div class="cal"><span>Trivago &middot; Q3</span><span>novembre</span></div>
     <div class="cal"><span>AstraZeneca &middot; Q3</span><span>novembre</span></div>
   </div>
   <div class="hint">Quattro appuntamenti l'anno, mezz'ora ciascuno. In mezzo non guardare.</div>
@@ -226,14 +226,13 @@ tr.tot .p2{color:inherit;opacity:.85}
 var POS=[
  {t:"Prysmian",m:"Milano",n:95,c:130.789,cur:"EUR",v:12425,sym:"PRY.MI",px0:121.40,nota:"31/08 in giornata",dt:"17 e 21/08"},
  {t:"Amazon",m:"Nasdaq",n:50,c:233.52,cur:"USD",v:11676,cu:270.883,sym:"AMZN",px0:266.43,nota:"28/08 22:00",dt:"17/08"},
- {t:"Thales",m:"Parigi",n:40,c:277.775,cur:"EUR",v:11111,sym:"HO.PA",px0:246.30,nota:"28/08 16:22",dt:"13/08"},
  {t:"Netflix",m:"Nasdaq",n:125,c:68.744,cur:"USD",v:8593,cu:80.430,sym:"NFLX",px0:81.72,nota:"28/08 22:00",dt:"20/08"},
  {t:"AstraZeneca",m:"NYSE",n:50,c:138.10,cur:"USD",v:6905,cu:160.196,sym:"AZN",px0:162.70,nota:"28/08 22:00",dt:"17/08"},
  {t:"Trivago",m:"Nasdaq",n:750,c:5.238,cur:"USD",v:3928,cu:6.0667,sym:"TRVG",px0:6.0667,nota:"31/08 carico",dt:"31/08"},
  {t:"Zeta",m:"NYSE",n:150,c:26.809,cur:"USD",v:4021,cu:31.0533,sym:"ZETA",px0:31.0533,nota:"31/08 carico",dt:"31/08"}
 ];
 var FX0=1.1583;
-var INV=58660;
+var INV=47549;
 
 var TESI=[
  {t:"Prysmian",d:"Elettrificazione delle reti e data center. Guidance 2026 alzata a 2,85 mld di EBITDA, leva bassa a 0,8x, ROE 22,7%, PEG 0,28. Digital Solutions al 24% di margine, capacit&agrave; USA in raddoppio entro il 2029.",
@@ -242,9 +241,6 @@ var TESI=[
  {t:"Amazon",d:"AWS cresce del 36,7%, la pi&ugrave; rapida in diciotto trimestri, con backlog da 496 mld e circa il 60% dell'utile operativo di gruppo. P/E forward circa 22.",
   e:"Il ritorno sui 220 miliardi di capex del 2026.",
   n:"Nessun dividendo. Il capex &egrave; stato alzato anche per i costi della memoria."},
- {t:"Thales",d:"Riarmo europeo. Ordini semestrali +22% organico, book-to-bill 1,14, portafoglio ordini a 53,3 mld pari a 2,3 anni di vendite. Debito netto ridotto di 3 mld in dodici mesi.",
-  e:"La conversione del portafoglio ordini in margine.",
-  n:"Punto debole noto: Cyber &amp; Digital in calo organico del 4,3%, margini in discesa su Payment Services e Identity."},
  {t:"Netflix",d:"Sgonfiamento del multiplo, non deterioramento del business. Ricavi +13%, margine operativo dal 29,5% al 31,5%, circa 19 volte gli utili 2026 contro attese di crescita del 21-22% annuo.",
   e:"Crescita dei ricavi sotto il 10% per due trimestri consecutivi.",
   n:"Agli atti: comprata di mia iniziativa il 20 agosto, prima dell'analisi del 31. Ackman era gi&agrave; rientrato, la decisione non dipende da lui. Punto debole: il 5% del budget contenuti va a sport ed eventi dal vivo che generano l'1% delle ore viste."},
@@ -264,7 +260,6 @@ var REGOLE=[
  ["Controlli sugli eventi","Quattro appuntamenti l'anno, circa trenta minuti ciascuno. In mezzo non guardare."],
  ["Orizzonte","I primi 3-6 mesi non diranno nulla. Sotto i due anni &egrave; quasi tutto rumore."],
  ["Rendimento atteso","7-9% annuo, non 10-12%. Nessuno di questi titoli &egrave; stato comprato a sconto: &egrave; il limite noto di questo portafoglio."],
- ["Copertura non progettata","Thales e Prysmian si muovono in direzioni opposte su uno scenario di pace in Ucraina. Non era voluto, ma va saputo."],
  ["Ricerca nuovi titoli","Prima si verificano prezzo e data di chiusura, poi si decide se parlarne. Il filtro sta a monte, non a valle."],
  ["Screener Finviz","52-Week High = New High &middot; SMA50 e SMA200 = price above &middot; Industry = Stocks only &middot; Market Cap = under 6 mld $ (aggiornato il 31/8, era 4 mld: il confine Russell small/large cap &egrave; salito a 5,7 mld) &middot; Price = over 5 &middot; Average Volume = over 100K. Rel Volume e Signal funzionano solo a mercato aperto, mai in premercato."],
  ["Eccezione Zeta","Comprata a ~7,3 mld, sopra anche il tetto nuovo di 6 mld, perch&eacute; unica su dieci candidati con lo squeeze reale (short interest 12,8%) e tutti gli altri criteri soddisfatti. Non &egrave; un precedente automatico: da rivalutare caso per caso."]
