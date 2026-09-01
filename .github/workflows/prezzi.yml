@@ -27,7 +27,7 @@ jobs:
           import json, time
           import yfinance as yf
 
-          SIMBOLI = ["PRY.MI", "HO.PA", "AMZN", "NFLX", "AZN", "TRVG", "ZETA", "EURUSD=X"]
+          SIMBOLI = ["PRY.MI", "AMZN", "NFLX", "AZN", "TRVG", "ZETA", "EURUSD=X"]
           fuori = {}
 
           for s in SIMBOLI:
