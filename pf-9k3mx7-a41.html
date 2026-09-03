@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Portafoglio v12</title>
+<title>Portafoglio v14</title>
 <style>
 :root{
   --bg:#0e1116; --panel:#161b22; --panel2:#1c232c; --line:#2a323d;
@@ -131,7 +131,7 @@ tr.tot .p2{color:inherit;opacity:.85}
 
 <header>
   <h1>Portafoglio <span style="font-size:11px;color:#6e7681;font-weight:400">v9</span></h1>
-  <div class="sub" id="sub">6 posizioni &middot; 47.549 &euro; investiti</div>
+  <div class="sub" id="sub">8 posizioni &middot; 53.877 &euro; investiti</div>
   <nav>
     <button class="on" data-t="pf">Posizioni</button>
     <button data-t="te">Tesi e uscite</button>
@@ -163,7 +163,7 @@ tr.tot .p2{color:inherit;opacity:.85}
   </div>
 
   <div class="grid3">
-    <div class="mini"><div class="lab">Speso</div><div class="val">47.549 &euro;</div>
+    <div class="mini"><div class="lab">Speso</div><div class="val">53.877 &euro;</div>
       <div class="sm">13&ndash;31/08</div></div>
     <div class="mini"><div class="lab">Vale ora</div><div class="val" id="mnow">&mdash;</div>
       <div class="sm" id="mnowd">&mdash;</div></div>
@@ -229,10 +229,12 @@ var POS=[
  {t:"Netflix",m:"Nasdaq",n:125,c:68.744,cur:"USD",v:8593,cu:80.430,sym:"NFLX",px0:81.72,nota:"28/08 22:00",dt:"20/08"},
  {t:"AstraZeneca",m:"NYSE",n:50,c:138.10,cur:"USD",v:6905,cu:160.196,sym:"AZN",px0:162.70,nota:"28/08 22:00",dt:"17/08"},
  {t:"Trivago",m:"Nasdaq",n:750,c:5.238,cur:"USD",v:3928,cu:6.0667,sym:"TRVG",px0:6.0667,nota:"31/08 carico",dt:"31/08"},
- {t:"Zeta",m:"NYSE",n:150,c:26.809,cur:"USD",v:4021,cu:31.0533,sym:"ZETA",px0:31.0533,nota:"31/08 carico",dt:"31/08"}
+ {t:"Zeta",m:"NYSE",n:150,c:26.809,cur:"USD",v:4021,cu:31.0533,sym:"ZETA",px0:31.0533,nota:"31/08 carico",dt:"31/08"},
+ {t:"Vir",m:"Nasdaq",n:300,c:10.101,cur:"USD",v:3510,cu:11.70,sym:"VIR",px0:11.70,nota:"02/09 carico",dt:"02/09"},
+ {t:"Micron",m:"Nasdaq",n:4,c:824.484,cur:"USD",v:3820,cu:955.0,sym:"MU",px0:955.0,nota:"02/09 carico",dt:"02/09"}
 ];
 var FX0=1.1583;
-var INV=47549;
+var INV=53877;
 
 var TESI=[
  {t:"Prysmian",d:"Elettrificazione delle reti e data center. Guidance 2026 alzata a 2,85 mld di EBITDA, leva bassa a 0,8x, ROE 22,7%, PEG 0,28. Digital Solutions al 24% di margine, capacit&agrave; USA in raddoppio entro il 2029.",
@@ -252,7 +254,13 @@ var TESI=[
   n:"Posizione satellite, orizzonte 3 anni (non 1). 750 azioni, 4.550 $ commissioni incluse, carico medio 6,07 $. Punto debole strutturale: schiacciata fra Google (traffico) ed Expedia (azionista di controllo e cliente); crescita attesa a 3 anni 7,9% contro 16% del settore. Short interest quasi nullo &mdash; nessuno squeeze possibile, il rendimento dipende solo dall'esecuzione."},
  {t:"Zeta",d:"L'unico dei dieci candidati Kratter esaminati il 31/8 con lo squeeze reale: short interest 12,8% del flottante, ventesima trimestrale consecutiva di beat-and-raise, primo utile netto GAAP positivo, crescita ricavi 43-44%. Catalizzatori nominati e datati: partnership OpenAI, Snowflake, Palantir (integrazione attesa entro 45 giorni).",
   e:"Crescita dei ricavi sotto il 20% per due trimestri consecutivi &mdash; il segnale che la striscia di beat-and-raise si &egrave; interrotta.",
-  n:"ECCEZIONE CONSAPEVOLE al tetto di 6 mld: comprata a ~7,3 mld, l'unica a sforare fra i sette titoli, perch&eacute; unica con tutti gli altri sei criteri pienamente soddisfatti. Eseguita 150 azioni su 175 ordinate a 31,05 $, sopra il limite di 30 fissato in origine &mdash; verificare il motivo con l'intermediario. Valutazione tirata (EV/EBITDA 65x). Massima attenzione alla riga di uscita: qui il margine di errore &egrave; pi&ugrave; stretto che sugli altri titoli."}
+  n:"ECCEZIONE CONSAPEVOLE al tetto di 6 mld: comprata a ~7,3 mld, l'unica a sforare fra i sette titoli, perch&eacute; unica con tutti gli altri sei criteri pienamente soddisfatti. Eseguita 150 azioni su 175 ordinate a 31,05 $, sopra il limite di 30 fissato in origine &mdash; verificare il motivo con l'intermediario. Valutazione tirata (EV/EBITDA 65x). Massima attenzione alla riga di uscita: qui il margine di errore &egrave; pi&ugrave; stretto che sugli altri titoli."},
+ {t:"Vir",d:"Biotech clinico. Short interest 14,63% del flottante e in salita costante da mesi (12,77% a met&agrave; maggio) &mdash; il miglior materiale da squeeze fra i sette candidati Kratter esaminati il 2/9. Catena di massimi da gennaio, non un salto isolato. Utile netto trimestrale positivo (80,1 mln) ma spinto da un pagamento di collaborazione una tantum (Astellas), non da vendite ricorrenti: ricavi TTM in calo strutturale rispetto al 2022.",
+  e:"Short interest sotto il 7,5% per due rilevazioni consecutive, oppure nessuna espansione di volume confermata entro fine settembre 2026.",
+  n:"COMPRATA NONOSTANTE LA GRIGLIA NON PASSASSE: il criterio due, l'espansione di volume, falliva al momento dell'acquisto (Rel Volume 0,79, sotto la media). Decisione presa sullo short interest crescente e sulla struttura tecnica, con piena consapevolezza del rischio. Fondamentali deboli: azienda ancora in perdita profonda (margine di profitto -83%, ROE -26%), ricavi ricorrenti in calo. Da monitorare pi&ugrave; da vicino delle altre posizioni."},
+ {t:"Micron",d:"Memoria HBM per l'AI, capacit&agrave; gi&agrave; venduta attraverso il 2026 (contratto da 100 mld $ di forniture pluriennali). Forward P/E 6,67, PEG 0,04 &mdash; molto sotto la media di settore nonostante crescita ricavi +56-57% anno su anno. Debt/Equity 0,06, ROE 66,64%, cassa netta positiva. Consenso analisti Strong Buy, target medio 1.513 $ (+60% dal prezzo di acquisto).",
+  e:"Prezzi DRAM/NAND in calo per due trimestri consecutivi secondo le trimestrali, oppure guidance ridotta rispetto al trimestre precedente.",
+  n:"Comprata durante un ritracciamento di circa il 25% dal massimo storico di giugno 2026 (1.255 $), non a un nuovo massimo. Il calo &egrave; dovuto a fattori esterni &mdash; rotazione di settore sui timori di valutazione AI, taglio target Citi sul rischio prezzi memoria, incertezza sui possibili dazi sui semiconduttori &mdash; non a un deterioramento dei fondamentali, che restano da record. Titolo ciclico e volatile (beta 2,22): la trimestrale del 30/9 &egrave; il primo vero test."}
 ];
 
 var REGOLE=[
