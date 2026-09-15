@@ -27,24 +27,26 @@ jobs:
           import json, time
           import yfinance as yf
 
-          SIMBOLI = ["PRY.MI", "AMZN", "NFLX", "AZN", "TRVG", "ZETA", "VIR", "MU", "EURUSD=X"]
+          SIMBOLI = ["PRY.MI", "AMZN", "NFLX", "AZN", "TRVG", "ZETA", "VIR", "MU", "AUPH", "EURUSD=X"]
           fuori = {}
 
           for s in SIMBOLI:
-              p = None; t = 0; st = ""; cur = ""
+              p = None; t = 0; st = ""; cur = ""; tk = None
               try:
                   tk = yf.Ticker(s)
                   fi = tk.fast_info
                   p = float(fi["last_price"])
                   cur = fi.get("currency") or ""
+                  st = "REGULAR"
               except Exception as e:
                   print(s, "fast_info ->", e)
-              if not p or p <= 0:
+              if (not p or p <= 0) and tk is not None:
                   try:
                       h = tk.history(period="1d", interval="1m")
                       if len(h):
                           p = float(h["Close"].iloc[-1])
                           t = int(h.index[-1].timestamp())
+                          st = ""
                   except Exception as e:
                       print(s, "history ->", e)
               if p and p > 0:
