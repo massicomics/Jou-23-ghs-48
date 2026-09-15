@@ -4,32 +4,32 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Portafoglio v15</title>
+<title>Portafoglio v16</title>
 <style>
 :root{
-  --bg:#0e1116; --panel:#161b22; --panel2:#1c232c; --line:#2a323d;
-  --tx:#e6edf3; --dim:#8b949e; --acc:#4a9eff; --pos:#3fb950; --neg:#f85149;
-  --warn:#d29922;
+--bg:#0e1116; --panel:#161b22; --panel2:#1c232c; --line:#2a323d;
+--tx:#e6edf3; --dim:#8b949e; --acc:#4a9eff; --pos:#3fb950; --neg:#f85149;
+--warn:#d29922;
 }
 *{box-sizing:border-box;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--tx);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:15px;line-height:1.5;padding-bottom:60px}
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+font-size:15px;line-height:1.5;padding-bottom:60px}
 header{position:sticky;top:0;z-index:50;background:rgba(14,17,22,.95);
-  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);padding:12px 16px;
-  padding-top:calc(12px + env(safe-area-inset-top))}
+-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line);padding:12px 16px;
+padding-top:calc(12px + env(safe-area-inset-top))}
 h1{font-size:17px;margin:0;font-weight:600;letter-spacing:.2px}
 .sub{font-size:12px;color:var(--dim);margin-top:2px}
 nav{display:flex;gap:6px;margin-top:10px;overflow-x:auto;-webkit-overflow-scrolling:touch}
 nav button{background:var(--panel2);color:var(--dim);border:1px solid var(--line);
-  border-radius:20px;padding:6px 14px;font-size:13px;white-space:nowrap;cursor:pointer;
-  font-family:inherit}
+border-radius:20px;padding:6px 14px;font-size:13px;white-space:nowrap;cursor:pointer;
+font-family:inherit}
 nav button.on{background:var(--acc);color:#06121f;border-color:var(--acc);font-weight:600}
 main{padding:16px;max-width:900px;margin:0 auto}
 section{display:none} section.on{display:block}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;
-  padding:14px;margin-bottom:12px}
+padding:14px;margin-bottom:12px}
 .big{background:linear-gradient(160deg,#1a2332,#161b22);text-align:center;padding:20px}
 .big .lab{font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:1px}
 .big .val{font-size:34px;font-weight:700;margin:6px 0;font-variant-numeric:tabular-nums}
@@ -45,36 +45,36 @@ table{width:100%;border-collapse:collapse;font-size:13px;table-layout:auto}
 td:last-child,th:last-child{white-space:nowrap;padding-left:8px}
 td:nth-child(2),th:nth-child(2){width:34px}
 th{text-align:right;padding:8px 6px;color:var(--dim);font-weight:600;font-size:11px;
-  text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--line)}
+text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--line)}
 th:first-child,td:first-child{text-align:left}
 td{padding:9px 6px;text-align:right;border-bottom:1px solid var(--line);
-  font-variant-numeric:tabular-nums}
+font-variant-numeric:tabular-nums}
 tr.tot td{border-top:2px solid var(--acc);border-bottom:none;font-weight:700;
-  background:var(--panel2);padding-top:11px}
+background:var(--panel2);padding-top:11px}
 .tk{font-weight:600}
 .tk small{display:block;font-weight:400;color:var(--dim);font-size:11px}
 input[type=number],input[type=text]{background:var(--panel2);border:1px solid var(--line);
-  color:var(--acc);border-radius:7px;padding:7px 8px;text-align:right;font-size:14px;
-  font-family:inherit;font-variant-numeric:tabular-nums;font-weight:600;-webkit-appearance:none}
+color:var(--acc);border-radius:7px;padding:7px 8px;text-align:right;font-size:14px;
+font-family:inherit;font-variant-numeric:tabular-nums;font-weight:600;-webkit-appearance:none}
 input[type=number]{width:88px}
 input[type=text]{width:78px;text-align:left;font-weight:400;font-size:13px}
 input:focus{outline:none;border-color:var(--acc)}
 .btn{background:var(--acc);color:#06121f;border:none;border-radius:9px;
-  padding:12px 18px;font-size:15px;font-weight:600;cursor:pointer;width:100%;
-  font-family:inherit}
+padding:12px 18px;font-size:15px;font-weight:600;cursor:pointer;width:100%;
+font-family:inherit}
 .btn:active{opacity:.75}
 .btn[disabled]{opacity:.5}
 .btn2{background:none;border:1px solid var(--line);color:var(--dim);
-  border-radius:8px;padding:7px 13px;font-size:12px;cursor:pointer;font-family:inherit}
+border-radius:8px;padding:7px 13px;font-size:12px;cursor:pointer;font-family:inherit}
 h2{font-size:14px;text-transform:uppercase;letter-spacing:.6px;color:var(--dim);
-  margin:22px 0 10px;font-weight:600}
+margin:22px 0 10px;font-weight:600}
 h3{font-size:15px;margin:0 0 4px;color:var(--acc)}
 .tesi{font-size:13.5px;margin:8px 0}
 .exit{background:#2a1f0e;border-left:3px solid var(--warn);padding:8px 11px;
-  border-radius:0 7px 7px 0;font-size:13px;margin-top:9px}
+border-radius:0 7px 7px 0;font-size:13px;margin-top:9px}
 .exit b{color:var(--warn)}
 .note{background:var(--panel2);border-left:3px solid var(--dim);padding:8px 11px;
-  border-radius:0 7px 7px 0;font-size:12.5px;margin-top:8px;color:var(--dim)}
+border-radius:0 7px 7px 0;font-size:12.5px;margin-top:8px;color:var(--dim)}
 .rule{padding:11px 0;border-bottom:1px solid var(--line)}
 .rule:last-child{border-bottom:none}
 .rule b{color:var(--tx);display:block;margin-bottom:3px;font-size:13.5px}
@@ -89,24 +89,24 @@ h3{font-size:15px;margin:0 0 4px;color:var(--acc)}
 .flash{animation:puls 1.6s ease-out}
 .up{color:var(--pos)!important} .dn{color:var(--neg)!important}
 #dot{display:none;width:8px;height:8px;border-radius:50%;
-  background:var(--neg);margin-left:7px;vertical-align:middle}
+background:var(--neg);margin-left:7px;vertical-align:middle}
 #dot.on{display:inline-block}
 #stat.hush{display:none}
 #stat.mini{color:var(--dim);font-size:11.5px}
 .dett{margin-top:8px;font-size:11px;color:var(--dim);text-align:left;
-  background:var(--panel2);border-radius:8px;padding:9px 11px;display:none}
+background:var(--panel2);border-radius:8px;padding:9px 11px;display:none}
 .dett.on{display:block}
 .dett b{color:var(--warn);display:block;margin-bottom:4px}
 .lnk{color:var(--acc);text-decoration:underline;cursor:pointer;font-size:11.5px}
 .autorow{display:flex;justify-content:space-between;align-items:center;
-  margin-top:10px;font-size:12.5px;color:var(--dim);gap:10px}
+margin-top:10px;font-size:12.5px;color:var(--dim);gap:10px}
 .sw{display:flex;align-items:center;gap:7px;cursor:pointer}
 .sw input{width:17px;height:17px;accent-color:var(--acc);margin:0}
 #ogni{background:var(--panel2);border:1px solid var(--line);color:var(--tx);
-  border-radius:7px;padding:5px 8px;font-size:12.5px;font-family:inherit}
+border-radius:7px;padding:5px 8px;font-size:12.5px;font-family:inherit}
 #stat{font-size:12.5px;margin-top:10px;text-align:center;min-height:18px}
 .sym{display:flex;justify-content:space-between;align-items:center;padding:8px 0;
-  border-bottom:1px solid var(--line);font-size:13px}
+border-bottom:1px solid var(--line);font-size:13px}
 .sym:last-child{border-bottom:none}
 .p1{display:block;font-weight:600;font-size:13px;white-space:nowrap}
 .p2{display:block;font-size:11.5px;color:var(--dim);margin-top:1px}
@@ -117,413 +117,387 @@ td input[type=number]+.p2{margin-top:4px}
 tr.tot .p1{font-size:14px}
 tr.tot .p2{color:inherit;opacity:.85}
 @media(max-width:420px){
-  td,th{padding:8px 3px;font-size:11.5px}
-  input[type=number]{width:66px;padding:5px;font-size:13px}
-  .p1{font-size:12px} .p2{font-size:10.5px} .p3{font-size:9px}
-  .big .val{font-size:29px}
-  .mini .val{font-size:15px}
-  .mini .lab{font-size:9.5px}
-  .mini .sm{font-size:9px}
+td,th{padding:8px 3px;font-size:11.5px}
+input[type=number]{width:66px;padding:5px;font-size:13px}
+.p1{font-size:12px} .p2{font-size:10.5px} .p3{font-size:9px}
+.big .val{font-size:29px}
+.mini .val{font-size:15px}
+.mini .lab{font-size:9.5px}
+.mini .sm{font-size:9px}
 }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Portafoglio <span style="font-size:11px;color:#6e7681;font-weight:400">v9</span></h1>
-  <div class="sub" id="sub">8 posizioni &middot; 53.877 &euro; investiti</div>
-  <nav>
-    <button class="on" data-t="pf">Posizioni</button>
-    <button data-t="te">Tesi e uscite</button>
-    <button data-t="rg">Regole</button>
-    <button data-t="cf">Simboli</button>
-  </nav>
+<h1>Portafoglio <span style="font-size:11px;color:#6e7681;font-weight:400">v16</span></h1>
+<div class="sub" id="sub">9 posizioni &middot; 56.657 &euro; investiti</div>
+<nav>
+<button class="on" data-t="pf">Posizioni</button>
+<button data-t="te">Tesi e uscite</button>
+<button data-t="rg">Regole</button>
+<button data-t="cf">Simboli</button>
+</nav>
 </header>
-
 <main>
-
 <section id="pf" class="on">
-  <div class="card big">
-    <div class="lab">Valore attuale</div>
-    <div class="val" id="tval">&mdash;</div>
-    <div class="pl" id="tpl">&mdash;</div>
-  </div>
-
-  <div class="card">
-    <button class="btn" id="go">&#8635; Aggiorna prezzi <span id="dot"></span></button>
-    <div class="autorow">
-      <label class="sw"><input type="checkbox" id="auto"><span>Aggiorna da solo</span></label>
-      <select id="ogni">
-        <option value="60">ogni minuto</option>
-        <option value="300" selected>ogni 5 minuti</option>
-        <option value="900">ogni 15 minuti</option>
-      </select>
-    </div>
-    <div id="stat" class="hush"></div><div class="dett" id="dett"></div>
-  </div>
-
-  <div class="grid3">
-    <div class="mini"><div class="lab">Speso</div><div class="val">53.877 &euro;</div>
-      <div class="sm">13&ndash;31/08</div></div>
-    <div class="mini"><div class="lab">Vale ora</div><div class="val" id="mnow">&mdash;</div>
-      <div class="sm" id="mnowd">&mdash;</div></div>
-    <div class="mini"><div class="lab">P&amp;L</div><div class="val" id="mpl">&mdash;</div>
-      <div class="sm" id="mplp">&mdash;</div></div>
-  </div>
-
-  <div class="card">
-    <div class="fx">
-      <label for="fx">Cambio EUR/USD <span id="fxt" style="font-size:11px"></span></label>
-      <input type="number" id="fx" step="0.0001" value="1.1583">
-    </div>
-  </div>
-
-  <div class="card">
-    <table>
-      <thead><tr>
-        <th>Titolo</th><th>Nr</th><th>Carico</th><th>Ora</th><th>P&amp;L</th>
-      </tr></thead>
-      <tbody id="tb"></tbody>
-    </table>
-    <div class="hint">Prezzi nella valuta di quotazione: Prysmian in euro, Amazon Netflix e AstraZeneca in dollari. Puoi sempre scriverli a mano sovrascrivendo quelli scaricati.</div>
-  </div>
-
-  <div style="text-align:center"><button class="btn2" id="rst">Azzera i prezzi inseriti</button></div>
-
-  <h2>Prossimi controlli</h2>
-  <div class="card">
-    <div class="cal"><span>Prysmian &middot; Q3</span><span>fine ottobre</span></div>
-    <div class="cal"><span>Amazon &middot; Q3</span><span>fine ottobre</span></div>
-    <div class="cal"><span>Netflix &middot; Q3</span><span>fine ottobre</span></div>
-    <div class="cal"><span>Trivago &middot; Q3</span><span>novembre</span></div>
-    <div class="cal"><span>AstraZeneca &middot; Q3</span><span>novembre</span></div>
-  </div>
-  <div class="hint">Quattro appuntamenti l'anno, mezz'ora ciascuno. In mezzo non guardare.</div>
+<div class="card big">
+<div class="lab">Valore attuale</div>
+<div class="val" id="tval">&mdash;</div>
+<div class="pl" id="tpl">&mdash;</div>
+</div>
+<div class="card">
+<button class="btn" id="go">&#8635; Aggiorna prezzi <span id="dot"></span></button>
+<div class="autorow">
+<label class="sw"><input type="checkbox" id="auto"><span>Aggiorna da solo</span></label>
+<select id="ogni">
+<option value="60">ogni minuto</option>
+<option value="300" selected>ogni 5 minuti</option>
+<option value="900">ogni 15 minuti</option>
+</select>
+</div>
+<div id="stat" class="hush"></div><div class="dett" id="dett"></div>
+</div>
+<div class="grid3">
+<div class="mini"><div class="lab">Speso</div><div class="val">56.657 &euro;</div>
+<div class="sm">13/08&ndash;09/09</div></div>
+<div class="mini"><div class="lab">Vale ora</div><div class="val" id="mnow">&mdash;</div>
+<div class="sm" id="mnowd">&mdash;</div></div>
+<div class="mini"><div class="lab">P&amp;L</div><div class="val" id="mpl">&mdash;</div>
+<div class="sm" id="mplp">&mdash;</div></div>
+</div>
+<div class="card">
+<div class="fx">
+<label for="fx">Cambio EUR/USD <span id="fxt" style="font-size:11px"></span></label>
+<input type="number" id="fx" step="0.0001" value="1.1583">
+</div>
+</div>
+<div class="card">
+<table>
+<thead><tr>
+<th>Titolo</th><th>Nr</th><th>Carico</th><th>Ora</th><th>P&amp;L</th>
+</tr></thead>
+<tbody id="tb"></tbody>
+</table>
+<div class="hint">Prezzi nella valuta di quotazione: Prysmian in euro, gli altri in dollari. Puoi sempre scriverli a mano sovrascrivendo quelli scaricati.</div>
+</div>
+<div style="text-align:center"><button class="btn2" id="rst">Azzera i prezzi inseriti</button></div>
+<h2>Prossimi controlli</h2>
+<div class="card">
+<div class="cal"><span>Prysmian &middot; Q3</span><span>fine ottobre</span></div>
+<div class="cal"><span>Amazon &middot; Q3</span><span>fine ottobre</span></div>
+<div class="cal"><span>Netflix &middot; Q3</span><span>fine ottobre</span></div>
+<div class="cal"><span>Trivago &middot; Q3</span><span>novembre</span></div>
+<div class="cal"><span>AstraZeneca &middot; Q3</span><span>novembre</span></div>
+<div class="cal"><span>Aurinia (AUPH) &middot; Q3</span><span>6 novembre</span></div>
+<div class="cal"><span>Micron &middot; Q4</span><span>30 settembre</span></div>
+</div>
+<div class="hint">Quattro appuntamenti l'anno, mezz'ora ciascuno. In mezzo non guardare.</div>
 </section>
-
 <section id="te"></section>
-
 <section id="rg">
-  <div class="card" id="rules"></div>
-  <div class="hint">Scritto il 31 agosto 2026, prima di sapere come &egrave; andata.</div>
+<div class="card" id="rules"></div>
+<div class="hint">Scritto il 31 agosto 2026, prima di sapere come &egrave; andata.</div>
 </section>
-
 <section id="cf">
-  <div class="card">
-    <h3>Simboli per lo scarico prezzi</h3>
-    <div class="hint" style="margin-top:4px">I dati arrivano da Yahoo Finance. Sono i simboli standard: nudi per il Nasdaq e il NYSE (<b>AMZN</b>), con il suffisso di borsa per l'Europa (<b>.MI</b> Milano, <b>.PA</b> Parigi, <b>.L</b> Londra, <b>.DE</b> Francoforte). Se un titolo non si aggiorna, cercalo su finance.yahoo.com e correggi qui.</div>
-    <div id="syms" style="margin-top:12px"></div>
-  </div>
-  <div class="card">
-    <h3>Se non funziona niente</h3>
-    <div class="hint" style="margin-top:4px">Il file prova prima il collegamento diretto, poi due ponti alternativi che aggirano il blocco del browser. Se falliscono tutti e tre, i prezzi si inseriscono a mano nella tabella e il file se li ricorda comunque. Nulla si rompe.</div>
-  </div>
+<div class="card">
+<h3>Simboli per lo scarico prezzi</h3>
+<div class="hint" style="margin-top:4px">I dati arrivano da Yahoo Finance. Sono i simboli standard: nudi per il Nasdaq e il NYSE (<b>AMZN</b>), con il suffisso di borsa per l'Europa (<b>.MI</b> Milano, <b>.PA</b> Parigi, <b>.L</b> Londra, <b>.DE</b> Francoforte). Se un titolo non si aggiorna, cercalo su finance.yahoo.com e correggi qui.</div>
+<div id="syms" style="margin-top:12px"></div>
+</div>
+<div class="card">
+<h3>Se non funziona niente</h3>
+<div class="hint" style="margin-top:4px">Il file prova prima il collegamento diretto, poi due ponti alternativi che aggirano il blocco del browser. Se falliscono tutti e tre, i prezzi si inseriscono a mano nella tabella e il file se li ricorda comunque. Nulla si rompe.</div>
+</div>
 </section>
-
 </main>
-
 <script>
 var POS=[
- {t:"Prysmian",m:"Milano",n:95,c:130.789,cur:"EUR",v:12425,sym:"PRY.MI",px0:121.40,nota:"31/08 in giornata",dt:"17 e 21/08"},
- {t:"Amazon",m:"Nasdaq",n:50,c:233.52,cur:"USD",v:11676,cu:270.883,sym:"AMZN",px0:266.43,nota:"28/08 22:00",dt:"17/08"},
- {t:"Netflix",m:"Nasdaq",n:125,c:68.744,cur:"USD",v:8593,cu:80.430,sym:"NFLX",px0:81.72,nota:"28/08 22:00",dt:"20/08"},
- {t:"AstraZeneca",m:"NYSE",n:50,c:138.10,cur:"USD",v:6905,cu:160.196,sym:"AZN",px0:162.70,nota:"28/08 22:00",dt:"17/08"},
- {t:"Trivago",m:"Nasdaq",n:750,c:5.238,cur:"USD",v:3928,cu:6.0667,sym:"TRVG",px0:6.0667,nota:"31/08 carico",dt:"31/08"},
- {t:"Zeta",m:"NYSE",n:150,c:26.809,cur:"USD",v:4021,cu:31.0533,sym:"ZETA",px0:31.0533,nota:"31/08 carico",dt:"31/08"},
- {t:"Vir",m:"Nasdaq",n:300,c:10.101,cur:"USD",v:3030,cu:11.70,sym:"VIR",px0:11.70,nota:"02/09 carico",dt:"02/09"},
- {t:"Micron",m:"Nasdaq",n:4,c:824.484,cur:"USD",v:3298,cu:955.0,sym:"MU",px0:955.0,nota:"02/09 carico",dt:"02/09"}
+{t:"Prysmian",m:"Milano",n:95,c:130.789,cur:"EUR",v:12425,sym:"PRY.MI",px0:121.40,nota:"31/08 in giornata",dt:"17 e 21/08"},
+{t:"Amazon",m:"Nasdaq",n:50,c:233.52,cur:"USD",v:11676,cu:270.883,sym:"AMZN",px0:266.43,nota:"28/08 22:00",dt:"17/08"},
+{t:"Netflix",m:"Nasdaq",n:125,c:68.744,cur:"USD",v:8593,cu:80.430,sym:"NFLX",px0:81.72,nota:"28/08 22:00",dt:"20/08"},
+{t:"AstraZeneca",m:"NYSE",n:50,c:138.10,cur:"USD",v:6905,cu:160.196,sym:"AZN",px0:162.70,nota:"28/08 22:00",dt:"17/08"},
+{t:"Trivago",m:"Nasdaq",n:750,c:5.238,cur:"USD",v:3928,cu:6.0667,sym:"TRVG",px0:6.0667,nota:"31/08 carico",dt:"31/08"},
+{t:"Zeta",m:"NYSE",n:150,c:26.809,cur:"USD",v:4021,cu:31.0533,sym:"ZETA",px0:31.0533,nota:"31/08 carico",dt:"31/08"},
+{t:"Vir",m:"Nasdaq",n:300,c:10.101,cur:"USD",v:3030,cu:11.70,sym:"VIR",px0:11.70,nota:"02/09 carico",dt:"02/09"},
+{t:"Micron",m:"Nasdaq",n:4,c:824.484,cur:"USD",v:3298,cu:955.0,sym:"MU",px0:955.0,nota:"02/09 carico",dt:"02/09"},
+{t:"Aurinia",m:"Nasdaq",n:200,c:13.900,cur:"USD",v:2780,cu:16.10,sym:"AUPH",px0:16.10,nota:"09/09 carico",dt:"09/09"}
 ];
 var FX0=1.1583;
-var INV=53877;
-
+var INV=56657;
 var TESI=[
- {t:"Prysmian",d:"Elettrificazione delle reti e data center. Guidance 2026 alzata a 2,85 mld di EBITDA, leva bassa a 0,8x, ROE 22,7%, PEG 0,28. Digital Solutions al 24% di margine, capacit&agrave; USA in raddoppio entro il 2029.",
-  e:"Rallentamento del capex sulle reti negli Stati Uniti.",
-  n:"Acquistata in due tempi: 75 a 132,65 il 17/8 e 20 a 123,80 il 21/8. Mediata al ribasso su una discesa da rotazione settoriale, non su un peggioramento dei fondamentali."},
- {t:"Amazon",d:"AWS cresce del 36,7%, la pi&ugrave; rapida in diciotto trimestri, con backlog da 496 mld e circa il 60% dell'utile operativo di gruppo. P/E forward circa 22.",
-  e:"Il ritorno sui 220 miliardi di capex del 2026.",
-  n:"Nessun dividendo. Il capex &egrave; stato alzato anche per i costi della memoria."},
- {t:"Netflix",d:"Sgonfiamento del multiplo, non deterioramento del business. Ricavi +13%, margine operativo dal 29,5% al 31,5%, circa 19 volte gli utili 2026 contro attese di crescita del 21-22% annuo.",
-  e:"Crescita dei ricavi sotto il 10% per due trimestri consecutivi.",
-  n:"Agli atti: comprata di mia iniziativa il 20 agosto, prima dell'analisi del 31. Ackman era gi&agrave; rientrato, la decisione non dipende da lui. Punto debole: il 5% del budget contenuti va a sport ed eventi dal vivo che generano l'1% delle ore viste."},
- {t:"AstraZeneca",d:"Oncologia +15%. Ricavi semestrali +6%, ma +11% escludendo Farxiga e Brilinta. Margine lordo core all'83%, oltre trenta approvazioni da fine 2025, ambizione 80 mld di ricavi entro il 2030.",
-  e:"Tagrisso: la linea di ricavi pi&ugrave; preziosa del gruppo e la pi&ugrave; esposta alla scadenza brevettuale.",
-  n:"Peso sottopesato deliberatamente perch&eacute; la big pharma mi d&agrave; fastidio come categoria. &Egrave; una ragione caratteriale, non un'analisi. Se un giorno vorr&ograve; uscire devo distinguere: uscire perch&eacute; Tagrisso cede &egrave; un dato, uscire perch&eacute; il settore mi infastidisce non &egrave; informazione nuova."},
- {t:"Trivago",d:"Risanamento aziendale confermato, non Rocket Stock. Sesto trimestre consecutivo di crescita a doppia cifra (ricavi Q2 168,4 mln contro 161,78 attesi), ritorno a EBITDA rettificato positivo, guidance 2026 alzata a met&agrave; della doppia cifra. Cassa 155 mln senza debito. Target degli analisti alzati dopo la trimestrale (B.Riley 6&rarr;8, Susquehanna 3,25&rarr;5,50, UBS 3,40&rarr;6): comprata sotto la media dei target.",
-  e:"Crescita dei ricavi sotto il 10% per due trimestri consecutivi, oppure EBITDA rettificato di nuovo negativo.",
-  n:"Posizione satellite, orizzonte 3 anni (non 1). 750 azioni, 4.550 $ commissioni incluse, carico medio 6,07 $. Punto debole strutturale: schiacciata fra Google (traffico) ed Expedia (azionista di controllo e cliente); crescita attesa a 3 anni 7,9% contro 16% del settore. Short interest quasi nullo &mdash; nessuno squeeze possibile, il rendimento dipende solo dall'esecuzione."},
- {t:"Zeta",d:"L'unico dei dieci candidati Kratter esaminati il 31/8 con lo squeeze reale: short interest 12,8% del flottante, ventesima trimestrale consecutiva di beat-and-raise, primo utile netto GAAP positivo, crescita ricavi 43-44%. Catalizzatori nominati e datati: partnership OpenAI, Snowflake, Palantir (integrazione attesa entro 45 giorni).",
-  e:"Crescita dei ricavi sotto il 20% per due trimestri consecutivi &mdash; il segnale che la striscia di beat-and-raise si &egrave; interrotta.",
-  n:"ECCEZIONE CONSAPEVOLE al tetto di 6 mld: comprata a ~7,3 mld, l'unica a sforare fra i sette titoli, perch&eacute; unica con tutti gli altri sei criteri pienamente soddisfatti. Eseguita 150 azioni su 175 ordinate a 31,05 $, sopra il limite di 30 fissato in origine &mdash; verificare il motivo con l'intermediario. Valutazione tirata (EV/EBITDA 65x). Massima attenzione alla riga di uscita: qui il margine di errore &egrave; pi&ugrave; stretto che sugli altri titoli."},
- {t:"Vir",d:"Biotech clinico. Short interest 14,63% del flottante e in salita costante da mesi (12,77% a met&agrave; maggio) &mdash; il miglior materiale da squeeze fra i sette candidati Kratter esaminati il 2/9. Catena di massimi da gennaio, non un salto isolato. Utile netto trimestrale positivo (80,1 mln) ma spinto da un pagamento di collaborazione una tantum (Astellas), non da vendite ricorrenti: ricavi TTM in calo strutturale rispetto al 2022.",
-  e:"Short interest sotto il 7,5% per due rilevazioni consecutive, oppure nessuna espansione di volume confermata entro fine settembre 2026.",
-  n:"COMPRATA NONOSTANTE LA GRIGLIA NON PASSASSE: il criterio due, l'espansione di volume, falliva al momento dell'acquisto (Rel Volume 0,79, sotto la media). Decisione presa sullo short interest crescente e sulla struttura tecnica, con piena consapevolezza del rischio. Fondamentali deboli: azienda ancora in perdita profonda (margine di profitto -83%, ROE -26%), ricavi ricorrenti in calo. Da monitorare pi&ugrave; da vicino delle altre posizioni."},
- {t:"Micron",d:"Memoria HBM per l'AI, capacit&agrave; gi&agrave; venduta attraverso il 2026 (contratto da 100 mld $ di forniture pluriennali). Forward P/E 6,67, PEG 0,04 &mdash; molto sotto la media di settore nonostante crescita ricavi +56-57% anno su anno. Debt/Equity 0,06, ROE 66,64%, cassa netta positiva. Consenso analisti Strong Buy, target medio 1.513 $ (+60% dal prezzo di acquisto).",
-  e:"Prezzi DRAM/NAND in calo per due trimestri consecutivi secondo le trimestrali, oppure guidance ridotta rispetto al trimestre precedente.",
-  n:"Comprata durante un ritracciamento di circa il 25% dal massimo storico di giugno 2026 (1.255 $), non a un nuovo massimo. Il calo &egrave; dovuto a fattori esterni &mdash; rotazione di settore sui timori di valutazione AI, taglio target Citi sul rischio prezzi memoria, incertezza sui possibili dazi sui semiconduttori &mdash; non a un deterioramento dei fondamentali, che restano da record. Titolo ciclico e volatile (beta 2,22): la trimestrale del 30/9 &egrave; il primo vero test."}
+{t:"Prysmian",d:"Elettrificazione delle reti e data center. Guidance 2026 alzata a 2,85 mld di EBITDA, leva bassa a 0,8x, ROE 22,7%, PEG 0,28. Digital Solutions al 24% di margine, capacit&agrave; USA in raddoppio entro il 2029.",
+e:"Rallentamento del capex sulle reti negli Stati Uniti.",
+n:"Acquistata in due tempi: 75 a 132,65 il 17/8 e 20 a 123,80 il 21/8. Mediata al ribasso su una discesa da rotazione settoriale, non su un peggioramento dei fondamentali. Nota 14-15/9: forte volatilit&agrave; per sell-off macro (petrolio, rendimenti Treasury, rallentamento AI) e per l'aumento di capitale riservato completato l'11/9 (diluizione 2,34-2,40%); nessun cambiamento nella tesi di fondo."},
+{t:"Amazon",d:"AWS cresce del 36,7%, la pi&ugrave; rapida in diciotto trimestri, con backlog da 496 mld e circa il 60% dell'utile operativo di gruppo. P/E forward circa 22.",
+e:"Il ritorno sui 220 miliardi di capex del 2026.",
+n:"Nessun dividendo. Il capex &egrave; stato alzato anche per i costi della memoria."},
+{t:"Netflix",d:"Sgonfiamento del multiplo, non deterioramento del business. Ricavi +13%, margine operativo dal 29,5% al 31,5%, circa 19 volte gli utili 2026 contro attese di crescita del 21-22% annuo.",
+e:"Crescita dei ricavi sotto il 10% per due trimestri consecutivi.",
+n:"Agli atti: comprata di mia iniziativa il 20 agosto, prima dell'analisi del 31. Ackman era gi&agrave; rientrato, la decisione non dipende da lui. Punto debole: il 5% del budget contenuti va a sport ed eventi dal vivo che generano l'1% delle ore viste."},
+{t:"AstraZeneca",d:"Oncologia +15%. Ricavi semestrali +6%, ma +11% escludendo Farxiga e Brilinta. Margine lordo core all'83%, oltre trenta approvazioni da fine 2025, ambizione 80 mld di ricavi entro il 2030.",
+e:"Tagrisso: la linea di ricavi pi&ugrave; preziosa del gruppo e la pi&ugrave; esposta alla scadenza brevettuale.",
+n:"Peso sottopesato deliberatamente perch&eacute; la big pharma mi d&agrave; fastidio come categoria. &Egrave; una ragione caratteriale, non un'analisi. Se un giorno vorr&ograve; uscire devo distinguere: uscire perch&eacute; Tagrisso cede &egrave; un dato, uscire perch&eacute; il settore mi infastidisce non &egrave; informazione nuova."},
+{t:"Trivago",d:"Risanamento aziendale confermato, non Rocket Stock. Sesto trimestre consecutivo di crescita a doppia cifra (ricavi Q2 168,4 mln contro 161,78 attesi), ritorno a EBITDA rettificato positivo, guidance 2026 alzata a met&agrave; della doppia cifra. Cassa 155 mln senza debito. Target degli analisti alzati dopo la trimestrale (B.Riley 6&rarr;8, Susquehanna 3,25&rarr;5,50, UBS 3,40&rarr;6): comprata sotto la media dei target.",
+e:"Crescita dei ricavi sotto il 10% per due trimestri consecutivi, oppure EBITDA rettificato di nuovo negativo.",
+n:"Posizione satellite, orizzonte 3 anni (non 1). 750 azioni, 4.550 $ commissioni incluse, carico medio 6,07 $. Punto debole strutturale: schiacciata fra Google (traffico) ed Expedia (azionista di controllo e cliente); crescita attesa a 3 anni 7,9% contro 16% del settore. Short interest quasi nullo &mdash; nessuno squeeze possibile, il rendimento dipende solo dall'esecuzione."},
+{t:"Zeta",d:"L'unico dei dieci candidati Kratter esaminati il 31/8 con lo squeeze reale: short interest 12,8% del flottante, ventesima trimestrale consecutiva di beat-and-raise, primo utile netto GAAP positivo, crescita ricavi 43-44%. Catalizzatori nominati e datati: partnership OpenAI, Snowflake, Palantir (integrazione attesa entro 45 giorni).",
+e:"Crescita dei ricavi sotto il 20% per due trimestri consecutivi &mdash; il segnale che la striscia di beat-and-raise si &egrave; interrotta.",
+n:"ECCEZIONE CONSAPEVOLE al tetto di 6 mld: comprata a ~7,3 mld, l'unica a sforare fra i sette titoli, perch&eacute; unica con tutti gli altri sei criteri pienamente soddisfatti. Eseguita 150 azioni su 175 ordinate a 31,05 $, sopra il limite di 30 fissato in origine &mdash; verificare il motivo con l'intermediario. Valutazione tirata (EV/EBITDA 65x). Massima attenzione alla riga di uscita: qui il margine di errore &egrave; pi&ugrave; stretto che sugli altri titoli."},
+{t:"Vir",d:"Biotech clinico. Short interest 14,63% del flottante e in salita costante da mesi (12,77% a met&agrave; maggio) &mdash; il miglior materiale da squeeze fra i sette candidati Kratter esaminati il 2/9. Catena di massimi da gennaio, non un salto isolato. Utile netto trimestrale positivo (80,1 mln) ma spinto da un pagamento di collaborazione una tantum (Astellas), non da vendite ricorrenti: ricavi TTM in calo strutturale rispetto al 2022. Trimestrale 5/8/2026 forte (ricavi 238,95 mln contro 135,88 attesi, +19.582% YoY per l'accordo Astellas). Nuovo massimo 52w a 11,74$ l'1/9. Catalizzatore datato da monitorare: dati topline Fase 3 ECLIPSE 1 (epatite delta cronica) attesi nel Q4 2026; ECLIPSE 2 e 3 nel Q1 2027.",
+e:"Short interest sotto il 7,5% per due rilevazioni consecutive, oppure nessuna espansione di volume confermata entro fine settembre 2026. Da valutare anche in base all'esito dei dati ECLIPSE 1 quando disponibili.",
+n:"COMPRATA NONOSTANTE LA GRIGLIA NON PASSASSE: il criterio due, l'espansione di volume, falliva al momento dell'acquisto (Rel Volume 0,79, sotto la media). Decisione presa sullo short interest crescente e sulla struttura tecnica, con piena consapevolezza del rischio. Fondamentali deboli: azienda ancora in perdita profonda (margine di profitto -83%, ROE -26%), ricavi ricorrenti in calo. Da monitorare pi&ugrave; da vicino delle altre posizioni."},
+{t:"Micron",d:"Memoria HBM per l'AI, capacit&agrave; gi&agrave; venduta attraverso il 2026 (contratto da 100 mld $ di forniture pluriennali). Forward P/E 6,67, PEG 0,04 &mdash; molto sotto la media di settore nonostante crescita ricavi +56-57% anno su anno. Debt/Equity 0,06, ROE 66,64%, cassa netta positiva. Consenso analisti Strong Buy, target medio 1.513 $ (+60% dal prezzo di acquisto).",
+e:"Prezzi DRAM/NAND in calo per due trimestri consecutivi secondo le trimestrali, oppure guidance ridotta rispetto al trimestre precedente.",
+n:"Comprata durante un ritracciamento di circa il 25% dal massimo storico di giugno 2026 (1.255 $), non a un nuovo massimo. Il calo &egrave; dovuto a fattori esterni &mdash; rotazione di settore sui timori di valutazione AI, taglio target Citi sul rischio prezzi memoria, incertezza sui possibili dazi sui semiconduttori &mdash; non a un deterioramento dei fondamentali, che restano da record. Titolo ciclico e volatile (beta 2,22): la trimestrale del 30/9 &egrave; il primo vero test."},
+{t:"Aurinia (AUPH)",d:"Lupkynis/voclosporin: primo e unico farmaco orale approvato FDA per la nefrite lupica. Trimestrale Q2 2026: ricavi netti 83,2 mln$ (+21% YoY), utile netto 37,4 mln$ (+74%), margine 45% (da 31%), EPS 0,29$ (da 0,16$). P/E circa 7x. ROE 64,98%, Debt/Equity 0,12, cassa 443 mln$. Buyback attivo (74,9 mln$ nel primo semestre). Insider: comprato 13,59 mln$, venduto zero negli ultimi 12 mesi. Guidance 2026: ricavi netti prodotto 305-315 mln$.",
+e:"Esito sfavorevole della claim construction nella causa brevetti consolidata contro Sandoz/Dr. Reddy's/Hikma/Zydus/Lotus-DifGen (nessuna data ancora fissata), oppure vendite nette Lupkynis sotto guidance per due trimestri consecutivi.",
+n:"Comprate 200 azioni a 16,10 $ il 9/9/2026, dopo un mese di consolidamento laterale post-accordo Teva (19/8: brevetti riconosciuti validi, generico bloccato fino al dicembre 2036 &mdash; un solo fronte legale su sei risolto). Cambio completo del vertice il 23/3/2026 (Kevin Tang succede a Peter Greenleaf come CEO, transizione ordinata). Rischio strutturale di fondo: dipendenza quasi totale da un solo farmaco commerciale. Prossima trimestrale: 6 novembre 2026."}
 ];
-
 var REGOLE=[
- ["Niente stop loss","Sono tesi fondamentali a 3-5 anni: la protezione &egrave; la trimestrale, non il prezzo. Lo stop &egrave; uno strumento da trading."],
- ["Controlli sugli eventi","Quattro appuntamenti l'anno, circa trenta minuti ciascuno. In mezzo non guardare."],
- ["Orizzonte","I primi 3-6 mesi non diranno nulla. Sotto i due anni &egrave; quasi tutto rumore."],
- ["Rendimento atteso","7-9% annuo, non 10-12%. Nessuno di questi titoli &egrave; stato comprato a sconto: &egrave; il limite noto di questo portafoglio."],
- ["Ricerca nuovi titoli","Prima si verificano prezzo e data di chiusura, poi si decide se parlarne. Il filtro sta a monte, non a valle."],
- ["Screener Finviz","52-Week High = New High &middot; SMA50 e SMA200 = price above &middot; Industry = Stocks only &middot; Market Cap = under 6 mld $ (aggiornato il 31/8, era 4 mld: il confine Russell small/large cap &egrave; salito a 5,7 mld) &middot; Price = over 5 &middot; Average Volume = over 100K. Rel Volume e Signal funzionano solo a mercato aperto, mai in premercato."],
- ["Eccezione Zeta","Comprata a ~7,3 mld, sopra anche il tetto nuovo di 6 mld, perch&eacute; unica su dieci candidati con lo squeeze reale (short interest 12,8%) e tutti gli altri criteri soddisfatti. Non &egrave; un precedente automatico: da rivalutare caso per caso."]
+["Niente stop loss","Sono tesi fondamentali a 3-5 anni: la protezione &egrave; la trimestrale, non il prezzo. Lo stop &egrave; uno strumento da trading."],
+["Controlli sugli eventi","Quattro appuntamenti l'anno, circa trenta minuti ciascuno. In mezzo non guardare."],
+["Orizzonte","I primi 3-6 mesi non diranno nulla. Sotto i due anni &egrave; quasi tutto rumore."],
+["Rendimento atteso","7-9% annuo, non 10-12%. Nessuno di questi titoli &egrave; stato comprato a sconto: &egrave; il limite noto di questo portafoglio."],
+["Ricerca nuovi titoli","Prima si verificano prezzo e data di chiusura, poi si decide se parlarne. Il filtro sta a monte, non a valle."],
+["Screener Finviz","52-Week High = New High &middot; SMA50 e SMA200 = price above &middot; Industry = Stocks only &middot; Market Cap = under 6 mld $ (aggiornato il 31/8, era 4 mld: il confine Russell small/large cap &egrave; salito a 5,7 mld) &middot; Price = over 5 &middot; Average Volume = over 100K. Rel Volume e Signal funzionano solo a mercato aperto, mai in premercato."],
+["Eccezione Zeta","Comprata a ~7,3 mld, sopra anche il tetto nuovo di 6 mld, perch&eacute; unica su dieci candidati con lo squeeze reale (short interest 12,8%) e tutti gli altri criteri soddisfatti. Non &egrave; un precedente automatico: da rivalutare caso per caso."],
+["Settore come filtro finale, non primo","Correzione del 12/9: quando 3+ titoli dello stesso settore compaiono in uno screen, il settore va usato come nota finale in caso di dubbio residuo, non come motivo di scarto immediato. Verificare sempre ogni titolo individualmente prima di scartare per rotazione settoriale &mdash; TEN e HAFN sarebbero stati persi applicando il filtro alla cieca."],
+["Insider selling: dimensione conta","Una vendita isolata di un singolo insider, sotto il 10-15% della sua posizione, &egrave; rumore normale (tasse su vesting, diversificazione personale). Il segnale vero &egrave;: pi&ugrave; insider che vendono nello stesso periodo, oppure lo stesso insider che vende ripetutamente per mesi, oppure vendite che superano una quota consistente della posizione personale."],
+["Analisti: mai come criterio","Rating, target price e raccomandazioni degli analisti non vanno mai usati per scartare o promuovere un titolo, coerentemente con lo spirito del metodo (sia Kratter sia il terzo screen). Solo fatti di bilancio verificabili: insider, debito, FCF, short interest, prezzo/volume."],
+["Gap da trimestrale: non scartare a priori","Un breakout innescato da una trimestrale non va escluso automaticamente. Verificare se il movimento tiene nei giorni successivi (nuovi massimi, volume sostenuto) invece di scartare solo per l'origine del catalizzatore."]
 ];
-
 var S={};
 try{var q0=localStorage.getItem('pf2026');if(q0)S=JSON.parse(q0);}catch(e){}
 function save(){try{localStorage.setItem('pf2026',JSON.stringify(S));}catch(e){}}
 function eu(x,d){
-  d=(d===undefined)?0:d;
-  var neg=x<0; x=Math.abs(x);
-  var f=x.toFixed(d), p=f.split('.');
-  p[0]=p[0].replace(/\B(?=(\d{3})+(?!\d))/g,'.');
-  return (neg?'-':'')+p[0]+(p[1]?','+p[1]:'');
+d=(d===undefined)?0:d;
+var neg=x<0; x=Math.abs(x);
+var f=x.toFixed(d), p=f.split('.');
+p[0]=p[0].replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+return (neg?'-':'')+p[0]+(p[1]?','+p[1]:'');
 }
 function symOf(p){return (S.__sym&&S.__sym[p.t])||p.sym;}
-
 var PREC={};
 function draw(){
-  var fx=parseFloat(document.getElementById('fx').value)||FX0;
-  var tb=document.getElementById('tb'),h='',tot=0,manca=0;
-  for(var i=0;i<POS.length;i++){
-    var p=POS[i];
-    var px=(S[p.t]!==undefined&&S[p.t]!==null&&S[p.t]!=='')?S[p.t]:p.px0;
-    var cari=(p.cur==='USD')?p.cu:p.c;
-    var sim=(p.cur==='USD')?'$':'\u20ac';
-    var val=null,pl=null,plp=null;
-    if(px!==undefined&&px!==null&&!isNaN(px)){
-      val=(p.cur==='USD')?(p.n*px/fx):(p.n*px);
-      pl=val-p.v;plp=pl/p.v*100;tot+=val;
-    }else{manca++;}
-    var cls=(pl===null)?'dim':((pl>=0)?'pos':'neg');
-    var ts=(S.__ts&&S.__ts[p.t])?S.__ts[p.t]:null;
-    var qt, qc='p3';
-    if(ts){
-      var eta=(Date.now()/1000)-ts.t;
-      qt=quando(ts.t);
-      if(ts.st==='REGULAR'){ qt+=' \u00b7 live'; qc='p3 live'; }
-      if(eta>4*3600) qc='p3 vecchio';
-    } else {
-      qt=(p.nota||'')+' \u00b7 non aggiornato'; qc='p3 vecchio';
-    }
-
-    h+='<tr>'
-      +'<td class="tk">'+p.t+'<small>'+p.m+'</small></td>'
-      +'<td>'+p.n+'</td>'
-      +'<td><span class="p1">'+eu(cari,2)+' '+sim+'</span>'
-        +'<span class="p2">'+eu(p.v)+' \u20ac</span>'
-        +'<span class="p3">'+p.dt+'</span></td>'
-      +'<td><input type="number" step="0.01" data-k="'+p.t+'" value="'+((px===undefined||px===null)?'':px)+'">'
-        +'<span class="p2">'+((val===null)?'\u2014':(eu(val)+' \u20ac'))+'</span>'
-        +'<span class="'+qc+'">'+qt+'</span></td>'
-      +'<td class="'+cls+'">'
-        +((pl===null)?'\u2014':('<span class="p1">'+(pl>=0?'+':'')+eu(pl)+' \u20ac</span>'
-          +'<span class="p2">'+(plp>=0?'+':'')+plp.toFixed(1)+'%</span>'))+'</td>'
-      +'</tr>';
-  }
-  var has=(manca===0);
-  var tpl=tot-INV,tplp=tpl/INV*100;
-  h+='<tr class="tot"><td>TOTALE</td><td>360</td>'
-    +'<td><span class="p1">'+eu(INV)+' \u20ac</span><span class="p3">13&ndash;31/08</span></td>'
-    +'<td><span class="p1">'+eu(tot)+' \u20ac</span><span class="p3">28/08</span></td>'
-    +'<td class="'+(has?((tpl>=0)?'pos':'neg'):'wr')+'">'
-    +'<span class="p1">'+(tpl>=0?'+':'')+eu(tpl)+' \u20ac</span>'
-    +'<span class="p2">'+(tplp>=0?'+':'')+tplp.toFixed(1)+'%</span></td></tr>';
-  tb.innerHTML=h;
-
-  document.getElementById('tval').innerHTML=eu(tot)+' &euro;'
-    +(has?'':' <span style="font-size:13px" class="wr">(parziale)</span>');
-  var mn=document.getElementById('mnow');
-  if(mn){ mn.innerHTML=eu(tot)+' &euro;';
-          mn.className='val '+(has?((tot>=INV)?'pos':'neg'):'wr'); }
-  var mnd=document.getElementById('mnowd');
-  if(mnd){ var ult='';
-    for(var z=0;z<POS.length;z++){
-      var tz=(S.__ts&&S.__ts[POS[z].t])?quando(S.__ts[POS[z].t].t):(POS[z].nota||'');
-      if(tz&&tz>ult) ult=tz; }
-    mnd.innerHTML=(ult||'28/08')+(STATO&&STATO.vuoto?'':''); }
-  var mp=document.getElementById('mpl'), mpp=document.getElementById('mplp');
-  if(mp){ mp.innerHTML=(tpl>=0?'+':'')+eu(tpl)+' &euro;';
-          mp.className='val '+(has?((tpl>=0)?'pos':'neg'):'wr'); }
-  if(mpp){ mpp.innerHTML='<span class="'+(has?((tpl>=0)?'pos':'neg'):'wr')+'">'
-          +(tplp>=0?'+':'')+tplp.toFixed(2)+'%</span>'; }
-  var e=document.getElementById('tpl');
-  e.innerHTML=(tpl>=0?'+':'')+eu(tpl)+' &euro; &nbsp; ('+(tplp>=0?'+':'')+tplp.toFixed(1)+'%)'
-    +(has?'':'<br><span style="font-size:12px" class="wr">'+manca+' senza prezzo, totale incompleto</span>');
-  e.className='pl '+(has?((tpl>=0)?'pos':'neg'):'wr');
-
-  var ins=tb.querySelectorAll('input');
-  for(var j=0;j<ins.length;j++){
-    ins[j].addEventListener('change',function(){
-      if(this.value==='')delete S[this.getAttribute('data-k')];
-      else S[this.getAttribute('data-k')]=parseFloat(this.value);
-      save();draw();
-    });
-    var k=ins[j].getAttribute('data-k'), v=parseFloat(ins[j].value);
-    if(PREC[k]!==undefined && PREC[k]!==v && !isNaN(v)){
-      (function(el,su){ el.parentNode.className='flash';
-        el.className=su?'up':'dn';
-        setTimeout(function(){ el.parentNode.className=''; el.className=''; },1700);
-      })(ins[j], v>PREC[k]);
-    }
-    PREC[k]=v;
-  }
+var fx=parseFloat(document.getElementById('fx').value)||FX0;
+var tb=document.getElementById('tb'),h='',tot=0,manca=0;
+for(var i=0;i<POS.length;i++){
+var p=POS[i];
+var px=(S[p.t]!==undefined&&S[p.t]!==null&&S[p.t]!=='')?S[p.t]:p.px0;
+var cari=(p.cur==='USD')?p.cu:p.c;
+var sim=(p.cur==='USD')?'$':'\u20ac';
+var val=null,pl=null,plp=null;
+if(px!==undefined&&px!==null&&!isNaN(px)){
+val=(p.cur==='USD')?(p.n*px/fx):(p.n*px);
+pl=val-p.v;plp=pl/p.v*100;tot+=val;
+}else{manca++;}
+var cls=(pl===null)?'dim':((pl>=0)?'pos':'neg');
+var ts=(S.__ts&&S.__ts[p.t])?S.__ts[p.t]:null;
+var qt, qc='p3';
+if(ts){
+var eta=(Date.now()/1000)-ts.t;
+qt=quando(ts.t);
+if(ts.st==='REGULAR'){ qt+=' \u00b7 live'; qc='p3 live'; }
+if(eta>4*3600) qc='p3 vecchio';
+} else {
+qt=(p.nota||'')+' \u00b7 non aggiornato'; qc='p3 vecchio';
 }
-
+h+='<tr>'
++'<td class="tk">'+p.t+'<small>'+p.m+'</small></td>'
++'<td>'+p.n+'</td>'
++'<td><span class="p1">'+eu(cari,2)+' '+sim+'</span>'
++'<span class="p2">'+eu(p.v)+' \u20ac</span>'
++'<span class="p3">'+p.dt+'</span></td>'
++'<td><input type="number" step="0.01" data-k="'+p.t+'" value="'+((px===undefined||px===null)?'':px)+'">'
++'<span class="p2">'+((val===null)?'\u2014':(eu(val)+' \u20ac'))+'</span>'
++'<span class="'+qc+'">'+qt+'</span></td>'
++'<td class="'+cls+'">'
++((pl===null)?'\u2014':('<span class="p1">'+(pl>=0?'+':'')+eu(pl)+' \u20ac</span>'
++'<span class="p2">'+(plp>=0?'+':'')+plp.toFixed(1)+'%</span>'))+'</td>'
++'</tr>';
+}
+var has=(manca===0);
+var tpl=tot-INV,tplp=tpl/INV*100;
+h+='<tr class="tot"><td>TOTALE</td><td>&mdash;</td>'
++'<td><span class="p1">'+eu(INV)+' \u20ac</span><span class="p3">13/08&ndash;09/09</span></td>'
++'<td><span class="p1">'+eu(tot)+' \u20ac</span><span class="p3">ultimo aggiornamento</span></td>'
++'<td class="'+(has?((tpl>=0)?'pos':'neg'):'wr')+'">'
++'<span class="p1">'+(tpl>=0?'+':'')+eu(tpl)+' \u20ac</span>'
++'<span class="p2">'+(tplp>=0?'+':'')+tplp.toFixed(1)+'%</span></td></tr>';
+tb.innerHTML=h;
+document.getElementById('tval').innerHTML=eu(tot)+' &euro;'
++(has?'':' <span style="font-size:13px" class="wr">(parziale)</span>');
+var mn=document.getElementById('mnow');
+if(mn){ mn.innerHTML=eu(tot)+' &euro;';
+mn.className='val '+(has?((tot>=INV)?'pos':'neg'):'wr'); }
+var mnd=document.getElementById('mnowd');
+if(mnd){ var ult='';
+for(var z=0;z<POS.length;z++){
+var tz=(S.__ts&&S.__ts[POS[z].t])?quando(S.__ts[POS[z].t].t):(POS[z].nota||'');
+if(tz&&tz>ult) ult=tz; }
+mnd.innerHTML=(ult||'\u2014')+(STATO&&STATO.vuoto?'':''); }
+var mp=document.getElementById('mpl'), mpp=document.getElementById('mplp');
+if(mp){ mp.innerHTML=(tpl>=0?'+':'')+eu(tpl)+' &euro;';
+mp.className='val '+(has?((tpl>=0)?'pos':'neg'):'wr'); }
+if(mpp){ mpp.innerHTML='<span class="'+(has?((tpl>=0)?'pos':'neg'):'wr')+'">'
++(tplp>=0?'+':'')+tplp.toFixed(2)+'%</span>'; }
+var e=document.getElementById('tpl');
+e.innerHTML=(tpl>=0?'+':'')+eu(tpl)+' &euro; &nbsp; ('+(tplp>=0?'+':'')+tplp.toFixed(1)+'%)'
++(has?'':'<br><span style="font-size:12px" class="wr">'+manca+' senza prezzo, totale incompleto</span>');
+e.className='pl '+(has?((tpl>=0)?'pos':'neg'):'wr');
+var ins=tb.querySelectorAll('input');
+for(var j=0;j<ins.length;j++){
+ins[j].addEventListener('change',function(){
+if(this.value==='')delete S[this.getAttribute('data-k')];
+else S[this.getAttribute('data-k')]=parseFloat(this.value);
+save();draw();
+});
+var k=ins[j].getAttribute('data-k'), v=parseFloat(ins[j].value);
+if(PREC[k]!==undefined && PREC[k]!==v && !isNaN(v)){
+(function(el,su){ el.parentNode.className='flash';
+el.className=su?'up':'dn';
+setTimeout(function(){ el.parentNode.className=''; el.className=''; },1700);
+})(ins[j], v>PREC[k]);
+}
+PREC[k]=v;
+}
+}
 var DIAG=[];
 var STATO={ok:0,bad:[],vuoto:false,ora:'\u2014'};
-
 function quando(ep){
-  if(!ep) return '';
-  var d=new Date(ep*1000);
-  return d.toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'})+' '
-       + d.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
+if(!ep) return '';
+var d=new Date(ep*1000);
+return d.toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'})+' '
++ d.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
 }
 function orario(){
-  var d=new Date();
-  return ('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2)
-       +':'+('0'+d.getSeconds()).slice(-2);
+var d=new Date();
+return ('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2)
++':'+('0'+d.getSeconds()).slice(-2);
 }
 function segnala(){
-  var d=document.getElementById('dot');
-  if(d) d.className = STATO.vuoto ? 'on' : '';
-  var st=document.getElementById('stat');
-  if(STATO.vuoto){ st.className='hush'; st.innerHTML=''; }
-  else if(STATO.bad.length){
-    st.className='mini';
-    st.innerHTML=STATO.ok+' su '+POS.length+' aggiornati \u00b7 '
-      +'<span class="lnk" onclick="mostraDett()">dettagli</span>';
-  } else { st.className='mini'; st.innerHTML='ultimo controllo '+STATO.ora; }
+var d=document.getElementById('dot');
+if(d) d.className = STATO.vuoto ? 'on' : '';
+var st=document.getElementById('stat');
+if(STATO.vuoto){ st.className='hush'; st.innerHTML=''; }
+else if(STATO.bad.length){
+st.className='mini';
+st.innerHTML=STATO.ok+' su '+POS.length+' aggiornati \u00b7 '
++'<span class="lnk" onclick="mostraDett()">dettagli</span>';
+} else { st.className='mini'; st.innerHTML='ultimo controllo '+STATO.ora; }
 }
 function esito(ok,bad){
-  STATO={ok:ok,bad:bad,vuoto:(ok===0),ora:orario()};
-  var dt=document.getElementById('dett');
-  if(ok===0){
-    dt.innerHTML='<b>Prezzi non disponibili</b>'
-      +'Il file prezzi.json non risponde. I valori mostrati sono gli ultimi noti.';
-    dt.className='dett on';
-  } else if(bad.length){
-    dt.innerHTML='<b>Non aggiornati: '+bad.join(', ')+'</b>'+DIAG.join('<br>');
-    dt.className='dett';
-  } else { dt.className='dett'; dt.innerHTML=''; }
-  segnala();
+STATO={ok:ok,bad:bad,vuoto:(ok===0),ora:orario()};
+var dt=document.getElementById('dett');
+if(ok===0){
+dt.innerHTML='<b>Prezzi non disponibili</b>'
++'Il file prezzi.json non risponde. I valori mostrati sono gli ultimi noti.';
+dt.className='dett on';
+} else if(bad.length){
+dt.innerHTML='<b>Non aggiornati: '+bad.join(', ')+'</b>'+DIAG.join('<br>');
+dt.className='dett';
+} else { dt.className='dett'; dt.innerHTML=''; }
+segnala();
 }
 function mostraDett(){
-  var d=document.getElementById('dett');
-  d.className = (d.className.indexOf('on')>=0) ? 'dett' : 'dett on';
+var d=document.getElementById('dett');
+d.className = (d.className.indexOf('on')>=0) ? 'dett' : 'dett on';
 }
-
 document.getElementById('go').addEventListener('click',function(){
-  var btn=this;
-  if(btn.dataset.busy==='1') return;
-  btn.dataset.busy='1'; DIAG=[];
-
-  fetch('prezzi.json?_='+Date.now(),{cache:'no-store'})
-    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
-    .then(function(j){
-      var q=j.prezzi||{}, ok=0, bad=[];
-      if(!S.__ts) S.__ts={};
-      for(var i=0;i<POS.length;i++){
-        var p=POS[i], v=q[symOf(p)];
-        if(v && v.p>0){
-          S[p.t]=v.p;
-          S.__ts[p.t]={t:v.t, st:v.st, got:Date.now()};
-          ok++;
-        } else { bad.push(p.t); DIAG.push(symOf(p)+': assente nel file'); }
-      }
-      var f=q['EURUSD=X'];
-      if(f && f.p>0){ S.__fx=f.p; S.__fxt=f.t;
-        document.getElementById('fx').value=f.p; }
-      save(); draw(); esito(ok,bad);
-    })['catch'](function(e){
-      DIAG.push('prezzi.json: '+e.message); esito(0,[]);
-    }).then(function(){ btn.dataset.busy=''; });
+var btn=this;
+if(btn.dataset.busy==='1') return;
+btn.dataset.busy='1'; DIAG=[];
+fetch('prezzi.json?_='+Date.now(),{cache:'no-store'})
+.then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+.then(function(j){
+var q=j.prezzi||{}, ok=0, bad=[];
+if(!S.__ts) S.__ts={};
+for(var i=0;i<POS.length;i++){
+var p=POS[i], v=q[symOf(p)];
+if(v && v.p>0){
+S[p.t]=v.p;
+S.__ts[p.t]={t:v.t, st:v.st, got:Date.now()};
+ok++;
+} else { bad.push(p.t); DIAG.push(symOf(p)+': assente nel file'); }
+}
+var f=q['EURUSD=X'];
+if(f && f.p>0){ S.__fx=f.p; S.__fxt=f.t;
+document.getElementById('fx').value=f.p; }
+save(); draw(); esito(ok,bad);
+})['catch'](function(e){
+DIAG.push('prezzi.json: '+e.message); esito(0,[]);
+}).then(function(){ btn.dataset.busy=''; });
 });
-
 var sy=document.getElementById('syms'),sh='';
 for(var i=0;i<POS.length;i++){
-  sh+='<div class="sym"><span>'+POS[i].t+' <span class="dim">&middot; '+POS[i].m+'</span></span>'
-    +'<input type="text" data-s="'+POS[i].t+'" value="'+symOf(POS[i])+'"></div>';
+sh+='<div class="sym"><span>'+POS[i].t+' <span class="dim">&middot; '+POS[i].m+'</span></span>'
++'<input type="text" data-s="'+POS[i].t+'" value="'+symOf(POS[i])+'"></div>';
 }
 sy.innerHTML=sh;
 var si=sy.querySelectorAll('input');
 for(var j=0;j<si.length;j++){
-  si[j].addEventListener('change',function(){
-    if(!S.__sym)S.__sym={};
-    S.__sym[this.getAttribute('data-s')]=this.value.trim();save();
-  });
+si[j].addEventListener('change',function(){
+if(!S.__sym)S.__sym={};
+S.__sym[this.getAttribute('data-s')]=this.value.trim();save();
+});
 }
-
 var th='';
 for(var i=0;i<TESI.length;i++){var x=TESI[i];
-  th+='<div class="card"><h3>'+x.t+'</h3><div class="tesi">'+x.d+'</div>'
-    +'<div class="exit"><b>Riga di uscita:</b> '+x.e+'</div>'
-    +'<div class="note">'+x.n+'</div></div>';}
+th+='<div class="card"><h3>'+x.t+'</h3><div class="tesi">'+x.d+'</div>'
++'<div class="exit"><b>Riga di uscita:</b> '+x.e+'</div>'
++'<div class="note">'+x.n+'</div></div>';}
 document.getElementById('te').innerHTML=th;
-
 var rh='';
 for(var i=0;i<REGOLE.length;i++)
-  rh+='<div class="rule"><b>'+REGOLE[i][0]+'</b><span>'+REGOLE[i][1]+'</span></div>';
+rh+='<div class="rule"><b>'+REGOLE[i][0]+'</b><span>'+REGOLE[i][1]+'</span></div>';
 document.getElementById('rules').innerHTML=rh;
-
 var nb=document.querySelectorAll('nav button');
 for(var i=0;i<nb.length;i++){
-  nb[i].addEventListener('click',function(){
-    for(var k=0;k<nb.length;k++)nb[k].classList.remove('on');
-    this.classList.add('on');
-    var ss=document.querySelectorAll('section');
-    for(var k=0;k<ss.length;k++)ss[k].classList.remove('on');
-    document.getElementById(this.getAttribute('data-t')).classList.add('on');
-    window.scrollTo(0,0);
-  });
+nb[i].addEventListener('click',function(){
+for(var k=0;k<nb.length;k++)nb[k].classList.remove('on');
+this.classList.add('on');
+var ss=document.querySelectorAll('section');
+for(var k=0;k<ss.length;k++)ss[k].classList.remove('on');
+document.getElementById(this.getAttribute('data-t')).classList.add('on');
+window.scrollTo(0,0);
+});
 }
-
 document.getElementById('fx').addEventListener('change',function(){
-  S.__fx=parseFloat(this.value);save();draw();});
+S.__fx=parseFloat(this.value);save();draw();});
 if(S.__fx)document.getElementById('fx').value=S.__fx;
 var fxe=document.getElementById('fxt');
-if(fxe)fxe.innerHTML=S.__fxt?('\u00b7 '+quando(S.__fxt)):'\u00b7 28/08 chiusura';
-
+if(fxe)fxe.innerHTML=S.__fxt?('\u00b7 '+quando(S.__fxt)):'\u00b7 09/09 indicativo';
 document.getElementById('rst').addEventListener('click',function(){
-  if(confirm('Azzerare tutti i prezzi inseriti?')){
-    var keep=S.__sym; S={}; if(keep)S.__sym=keep; save();
-    document.getElementById('fx').value=FX0;draw();}
+if(confirm('Azzerare tutti i prezzi inseriti?')){
+var keep=S.__sym; S={}; if(keep)S.__sym=keep; save();
+document.getElementById('fx').value=FX0;draw();}
 });
-
-
 function aggiorna(){ document.getElementById('go').click(); }
-
 var TIMER=null;
 function riarma(){
-  if(TIMER){clearInterval(TIMER);TIMER=null;}
-  var on=document.getElementById('auto').checked;
-  var sec=parseInt(document.getElementById('ogni').value,10)||300;
-  S.__auto=on; S.__ogni=sec; save();
-  if(on) TIMER=setInterval(aggiorna,sec*1000);
+if(TIMER){clearInterval(TIMER);TIMER=null;}
+var on=document.getElementById('auto').checked;
+var sec=parseInt(document.getElementById('ogni').value,10)||300;
+S.__auto=on; S.__ogni=sec; save();
+if(on) TIMER=setInterval(aggiorna,sec*1000);
 }
 document.getElementById('auto').addEventListener('change',function(){
-  riarma(); if(this.checked) aggiorna();
+riarma(); if(this.checked) aggiorna();
 });
 document.getElementById('ogni').addEventListener('change',riarma);
 document.getElementById('go').addEventListener('click',function(ev){
-  if(ev.target&&ev.target.id==='dot'){ ev.stopPropagation(); mostraDett(); }
+if(ev.target&&ev.target.id==='dot'){ ev.stopPropagation(); mostraDett(); }
 },true);
 if(S.__auto)document.getElementById('auto').checked=true;
 if(S.__ogni)document.getElementById('ogni').value=String(S.__ogni);
 riarma();
-
 draw();
-
 // scarico automatico all'apertura, se non aggiornato negli ultimi 10 minuti
 (function(){
-  var fresco=false;
-  if(S.__ts){ for(var k in S.__ts){ if(S.__ts[k]&&S.__ts[k].got&&
-      (Date.now()-S.__ts[k].got)<600000){ fresco=true; break; } } }
-  if(!fresco) setTimeout(function(){ document.getElementById('go').click(); },400);
+var fresco=false;
+if(S.__ts){ for(var k in S.__ts){ if(S.__ts[k]&&S.__ts[k].got&&
+(Date.now()-S.__ts[k].got)<600000){ fresco=true; break; } } }
+if(!fresco) setTimeout(function(){ document.getElementById('go').click(); },400);
 })();
 </script>
 </body>
