@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Portafoglio v16</title>
+<title>Portafoglio v17</title>
 <style>
 :root{
 --bg:#0e1116; --panel:#161b22; --panel2:#1c232c; --line:#2a323d;
@@ -113,6 +113,10 @@ border-bottom:1px solid var(--line);font-size:13px}
 .p3{display:block;font-size:10px;color:#6e7681;margin-top:2px;letter-spacing:.2px}
 .p3.vecchio{color:var(--warn)}
 .p3.live{color:var(--pos)}
+.pday{display:inline-block;font-size:11px;font-weight:700;padding:1px 6px;
+border-radius:5px;margin-left:6px;vertical-align:middle}
+.pday.pos{background:rgba(63,185,80,.16);color:var(--pos)}
+.pday.neg{background:rgba(248,81,73,.16);color:var(--neg)}
 td input[type=number]+.p2{margin-top:4px}
 tr.tot .p1{font-size:14px}
 tr.tot .p2{color:inherit;opacity:.85}
@@ -124,13 +128,14 @@ input[type=number]{width:66px;padding:5px;font-size:13px}
 .mini .val{font-size:15px}
 .mini .lab{font-size:9.5px}
 .mini .sm{font-size:9px}
+.pday{font-size:10px;padding:1px 4px;margin-left:3px}
 }
 </style>
 </head>
 <body>
 <header>
-<h1>Portafoglio <span style="font-size:11px;color:#6e7681;font-weight:400">v16</span></h1>
-<div class="sub" id="sub">9 posizioni &middot; 56.657 &euro; investiti</div>
+<h1>Portafoglio <span style="font-size:11px;color:#6e7681;font-weight:400">v17</span></h1>
+<div class="sub" id="sub">10 posizioni &middot; 58.147 &euro; investiti</div>
 <nav>
 <button class="on" data-t="pf">Posizioni</button>
 <button data-t="te">Tesi e uscite</button>
@@ -158,8 +163,8 @@ input[type=number]{width:66px;padding:5px;font-size:13px}
 <div id="stat" class="hush"></div><div class="dett" id="dett"></div>
 </div>
 <div class="grid3">
-<div class="mini"><div class="lab">Speso</div><div class="val">56.657 &euro;</div>
-<div class="sm">13/08&ndash;09/09</div></div>
+<div class="mini"><div class="lab">Speso</div><div class="val">58.147 &euro;</div>
+<div class="sm">13/08&ndash;17/09</div></div>
 <div class="mini"><div class="lab">Vale ora</div><div class="val" id="mnow">&mdash;</div>
 <div class="sm" id="mnowd">&mdash;</div></div>
 <div class="mini"><div class="lab">P&amp;L</div><div class="val" id="mpl">&mdash;</div>
@@ -174,11 +179,11 @@ input[type=number]{width:66px;padding:5px;font-size:13px}
 <div class="card">
 <table>
 <thead><tr>
-<th>Titolo</th><th>Nr</th><th>Carico</th><th>Ora</th><th>P&amp;L</th>
+<th>Titolo</th><th>Nr</th><th>Carico</th><th>Ora / oggi</th><th>P&amp;L</th>
 </tr></thead>
 <tbody id="tb"></tbody>
 </table>
-<div class="hint">Prezzi nella valuta di quotazione: Prysmian in euro, gli altri in dollari. Puoi sempre scriverli a mano sovrascrivendo quelli scaricati.</div>
+<div class="hint">Prezzi nella valuta di quotazione: Prysmian in euro, gli altri in dollari. Il badge verde/rosso accanto al prezzo &egrave; la variazione della singola seduta di borsa in corso, non il tuo guadagno/perdita personale (quello &egrave; nell'ultima colonna). Puoi sempre scrivere i prezzi a mano sovrascrivendo quelli scaricati.</div>
 </div>
 <div style="text-align:center"><button class="btn2" id="rst">Azzera i prezzi inseriti</button></div>
 <h2>Prossimi controlli</h2>
@@ -190,6 +195,7 @@ input[type=number]{width:66px;padding:5px;font-size:13px}
 <div class="cal"><span>AstraZeneca &middot; Q3</span><span>novembre</span></div>
 <div class="cal"><span>Aurinia (AUPH) &middot; Q3</span><span>6 novembre</span></div>
 <div class="cal"><span>Micron &middot; Q4</span><span>30 settembre</span></div>
+<div class="cal"><span>Elmet (ELMT) &middot; scadenza lock-up IPO</span><span>~21 ottobre (stimata)</span></div>
 </div>
 <div class="hint">Quattro appuntamenti l'anno, mezz'ora ciascuno. In mezzo non guardare.</div>
 </section>
@@ -220,10 +226,11 @@ var POS=[
 {t:"Zeta",m:"NYSE",n:150,c:26.809,cur:"USD",v:4021,cu:31.0533,sym:"ZETA",px0:31.0533,nota:"31/08 carico",dt:"31/08"},
 {t:"Vir",m:"Nasdaq",n:300,c:10.101,cur:"USD",v:3030,cu:11.70,sym:"VIR",px0:11.70,nota:"02/09 carico",dt:"02/09"},
 {t:"Micron",m:"Nasdaq",n:4,c:824.484,cur:"USD",v:3298,cu:955.0,sym:"MU",px0:955.0,nota:"02/09 carico",dt:"02/09"},
-{t:"Aurinia",m:"Nasdaq",n:200,c:13.900,cur:"USD",v:2780,cu:16.10,sym:"AUPH",px0:16.10,nota:"09/09 carico",dt:"09/09"}
+{t:"Aurinia",m:"Nasdaq",n:200,c:13.900,cur:"USD",v:2780,cu:16.10,sym:"AUPH",px0:16.10,nota:"09/09 carico",dt:"09/09"},
+{t:"Elmet",m:"Nasdaq",n:75,c:19.858,cur:"USD",v:1490,cu:23.00,sym:"ELMT",px0:23.00,nota:"17/09 carico",dt:"17/09"}
 ];
 var FX0=1.1583;
-var INV=56657;
+var INV=58147;
 var TESI=[
 {t:"Prysmian",d:"Elettrificazione delle reti e data center. Guidance 2026 alzata a 2,85 mld di EBITDA, leva bassa a 0,8x, ROE 22,7%, PEG 0,28. Digital Solutions al 24% di margine, capacit&agrave; USA in raddoppio entro il 2029.",
 e:"Rallentamento del capex sulle reti negli Stati Uniti.",
@@ -251,7 +258,10 @@ e:"Prezzi DRAM/NAND in calo per due trimestri consecutivi secondo le trimestrali
 n:"Comprata durante un ritracciamento di circa il 25% dal massimo storico di giugno 2026 (1.255 $), non a un nuovo massimo. Il calo &egrave; dovuto a fattori esterni &mdash; rotazione di settore sui timori di valutazione AI, taglio target Citi sul rischio prezzi memoria, incertezza sui possibili dazi sui semiconduttori &mdash; non a un deterioramento dei fondamentali, che restano da record. Titolo ciclico e volatile (beta 2,22): la trimestrale del 30/9 &egrave; il primo vero test."},
 {t:"Aurinia (AUPH)",d:"Lupkynis/voclosporin: primo e unico farmaco orale approvato FDA per la nefrite lupica. Trimestrale Q2 2026: ricavi netti 83,2 mln$ (+21% YoY), utile netto 37,4 mln$ (+74%), margine 45% (da 31%), EPS 0,29$ (da 0,16$). P/E circa 7x. ROE 64,98%, Debt/Equity 0,12, cassa 443 mln$. Buyback attivo (74,9 mln$ nel primo semestre). Insider: comprato 13,59 mln$, venduto zero negli ultimi 12 mesi. Guidance 2026: ricavi netti prodotto 305-315 mln$.",
 e:"Esito sfavorevole della claim construction nella causa brevetti consolidata contro Sandoz/Dr. Reddy's/Hikma/Zydus/Lotus-DifGen (nessuna data ancora fissata), oppure vendite nette Lupkynis sotto guidance per due trimestri consecutivi.",
-n:"Comprate 200 azioni a 16,10 $ il 9/9/2026, dopo un mese di consolidamento laterale post-accordo Teva (19/8: brevetti riconosciuti validi, generico bloccato fino al dicembre 2036 &mdash; un solo fronte legale su sei risolto). Cambio completo del vertice il 23/3/2026 (Kevin Tang succede a Peter Greenleaf come CEO, transizione ordinata). Rischio strutturale di fondo: dipendenza quasi totale da un solo farmaco commerciale. Prossima trimestrale: 6 novembre 2026."}
+n:"Comprate 200 azioni a 16,10 $ il 9/9/2026, dopo un mese di consolidamento laterale post-accordo Teva (19/8: brevetti riconosciuti validi, generico bloccato fino al dicembre 2036 &mdash; un solo fronte legale su sei risolto). Cambio completo del vertice il 23/3/2026 (Kevin Tang succede a Peter Greenleaf come CEO, transizione ordinata). Rischio strutturale di fondo: dipendenza quasi totale da un solo farmaco commerciale. Prossima trimestrale: 6 novembre 2026."},
+{t:"Elmet (ELMT)",d:"Unico produttore USA verticalmente integrato di tungsteno e molibdeno, materiali critici per difesa, aerospaziale, semiconduttori. Contratto IDIQ con la Defense Logistics Agency: tetto fino a 2 mld$, 150 mln$ garantiti almeno fino al 2031. Insider ownership 66,32%, Insider Transactions +0,06% (sostanzialmente piatto, nessuna vendita in corso). EPS this Year +39,68%.",
+e:"Perdita di un contratto governativo chiave o segnali di cancellazione/sospensione; emergere di problemi concreti sui controlli interni finanziari (non solo dichiarati nel prospetto); comportamento anomalo di insider in vista della scadenza lock-up.",
+n:"IPO recentissima (24 aprile 2026, prezzo 14$, proventi 125,5 mln$). Prima posizione comprata (2.000$) e rivenduta dopo ~20 minuti in perdita di 300-400$ il 15/9, giornata di forte volatilit&agrave; macro (petrolio, rendimenti, riunione Fed). RICOMPRATA il 17/9: 75 azioni a 23$ di carico. Flottante pubblico minuscolo (10,26 mln azioni) &mdash; volatilit&agrave; infragiornaliera estrema attesa. Rischio calendarizzato concreto: scadenza lock-up IPO stimata attorno al 21 ottobre 2026 (180 giorni standard da IPO), da ricontrollare prima di quella data. Prospetto dichiara esplicitamente \"material weaknesses in internal controls\"."}
 ];
 var REGOLE=[
 ["Niente stop loss","Sono tesi fondamentali a 3-5 anni: la protezione &egrave; la trimestrale, non il prezzo. Lo stop &egrave; uno strumento da trading."],
@@ -264,7 +274,8 @@ var REGOLE=[
 ["Settore come filtro finale, non primo","Correzione del 12/9: quando 3+ titoli dello stesso settore compaiono in uno screen, il settore va usato come nota finale in caso di dubbio residuo, non come motivo di scarto immediato. Verificare sempre ogni titolo individualmente prima di scartare per rotazione settoriale &mdash; TEN e HAFN sarebbero stati persi applicando il filtro alla cieca."],
 ["Insider selling: dimensione conta","Una vendita isolata di un singolo insider, sotto il 10-15% della sua posizione, &egrave; rumore normale (tasse su vesting, diversificazione personale). Il segnale vero &egrave;: pi&ugrave; insider che vendono nello stesso periodo, oppure lo stesso insider che vende ripetutamente per mesi, oppure vendite che superano una quota consistente della posizione personale."],
 ["Analisti: mai come criterio","Rating, target price e raccomandazioni degli analisti non vanno mai usati per scartare o promuovere un titolo, coerentemente con lo spirito del metodo (sia Kratter sia il terzo screen). Solo fatti di bilancio verificabili: insider, debito, FCF, short interest, prezzo/volume."],
-["Gap da trimestrale: non scartare a priori","Un breakout innescato da una trimestrale non va escluso automaticamente. Verificare se il movimento tiene nei giorni successivi (nuovi massimi, volume sostenuto) invece di scartare solo per l'origine del catalizzatore."]
+["Gap da trimestrale: non scartare a priori","Un breakout innescato da una trimestrale non va escluso automaticamente. Verificare se il movimento tiene nei giorni successivi (nuovi massimi, volume sostenuto) invece di scartare solo per l'origine del catalizzatore."],
+["Massima potenza di analisi per default","Su ogni compito assegnato, usare sempre la massima profondit&agrave; e completezza possibile, senza chiedere se fermarsi a met&agrave; strada. Si riduce lo sforzo solo su richiesta esplicita."]
 ];
 var S={};
 try{var q0=localStorage.getItem('pf2026');if(q0)S=JSON.parse(q0);}catch(e){}
@@ -302,13 +313,19 @@ if(eta>4*3600) qc='p3 vecchio';
 } else {
 qt=(p.nota||'')+' \u00b7 non aggiornato'; qc='p3 vecchio';
 }
+var pc=(S.__pc&&S.__pc[p.t])?S.__pc[p.t]:null;
+var giorno='';
+if(pc && px!==undefined && px!==null && !isNaN(px) && pc>0){
+var dchg=(px-pc)/pc*100;
+giorno='<span class="pday '+(dchg>=0?'pos':'neg')+'">'+(dchg>=0?'+':'')+dchg.toFixed(1)+'%</span>';
+}
 h+='<tr>'
 +'<td class="tk">'+p.t+'<small>'+p.m+'</small></td>'
 +'<td>'+p.n+'</td>'
 +'<td><span class="p1">'+eu(cari,2)+' '+sim+'</span>'
 +'<span class="p2">'+eu(p.v)+' \u20ac</span>'
 +'<span class="p3">'+p.dt+'</span></td>'
-+'<td><input type="number" step="0.01" data-k="'+p.t+'" value="'+((px===undefined||px===null)?'':px)+'">'
++'<td><input type="number" step="0.01" data-k="'+p.t+'" value="'+((px===undefined||px===null)?'':px)+'">'+giorno
 +'<span class="p2">'+((val===null)?'\u2014':(eu(val)+' \u20ac'))+'</span>'
 +'<span class="'+qc+'">'+qt+'</span></td>'
 +'<td class="'+cls+'">'
@@ -319,7 +336,7 @@ h+='<tr>'
 var has=(manca===0);
 var tpl=tot-INV,tplp=tpl/INV*100;
 h+='<tr class="tot"><td>TOTALE</td><td>&mdash;</td>'
-+'<td><span class="p1">'+eu(INV)+' \u20ac</span><span class="p3">13/08&ndash;09/09</span></td>'
++'<td><span class="p1">'+eu(INV)+' \u20ac</span><span class="p3">13/08&ndash;17/09</span></td>'
 +'<td><span class="p1">'+eu(tot)+' \u20ac</span><span class="p3">ultimo aggiornamento</span></td>'
 +'<td class="'+(has?((tpl>=0)?'pos':'neg'):'wr')+'">'
 +'<span class="p1">'+(tpl>=0?'+':'')+eu(tpl)+' \u20ac</span>'
@@ -412,11 +429,13 @@ fetch('prezzi.json?_='+Date.now(),{cache:'no-store'})
 .then(function(j){
 var q=j.prezzi||{}, ok=0, bad=[];
 if(!S.__ts) S.__ts={};
+if(!S.__pc) S.__pc={};
 for(var i=0;i<POS.length;i++){
 var p=POS[i], v=q[symOf(p)];
 if(v && v.p>0){
 S[p.t]=v.p;
 S.__ts[p.t]={t:v.t, st:v.st, got:Date.now()};
+if(v.pc && v.pc>0) S.__pc[p.t]=v.pc;
 ok++;
 } else { bad.push(p.t); DIAG.push(symOf(p)+': assente nel file'); }
 }
@@ -466,7 +485,7 @@ document.getElementById('fx').addEventListener('change',function(){
 S.__fx=parseFloat(this.value);save();draw();});
 if(S.__fx)document.getElementById('fx').value=S.__fx;
 var fxe=document.getElementById('fxt');
-if(fxe)fxe.innerHTML=S.__fxt?('\u00b7 '+quando(S.__fxt)):'\u00b7 09/09 indicativo';
+if(fxe)fxe.innerHTML=S.__fxt?('\u00b7 '+quando(S.__fxt)):'\u00b7 17/09 indicativo';
 document.getElementById('rst').addEventListener('click',function(){
 if(confirm('Azzerare tutti i prezzi inseriti?')){
 var keep=S.__sym; S={}; if(keep)S.__sym=keep; save();
