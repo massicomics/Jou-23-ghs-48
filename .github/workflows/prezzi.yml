@@ -27,33 +27,44 @@ jobs:
           import json, time
           import yfinance as yf
 
-          SIMBOLI = ["PRY.MI", "AMZN", "NFLX", "AZN", "TRVG", "ZETA", "VIR", "MU", "AUPH", "EURUSD=X"]
+          SIMBOLI = ["PRY.MI", "AMZN", "NFLX", "AZN", "TRVG", "ZETA", "VIR", "MU", "AUPH", "ELMT", "EURUSD=X"]
           fuori = {}
 
           for s in SIMBOLI:
-              p = None; t = 0; st = ""; cur = ""; tk = None
+              p = None; t = 0; st = ""; cur = ""; pc = None; tk = None
               try:
                   tk = yf.Ticker(s)
                   fi = tk.fast_info
                   p = float(fi["last_price"])
                   cur = fi.get("currency") or ""
                   st = "REGULAR"
+                  try:
+                      raw_pc = fi.get("previous_close") or fi.get("regular_market_previous_close")
+                      if raw_pc:
+                          pc = float(raw_pc)
+                  except Exception as e:
+                      print(s, "previous_close ->", e)
               except Exception as e:
                   print(s, "fast_info ->", e)
               if (not p or p <= 0) and tk is not None:
                   try:
-                      h = tk.history(period="1d", interval="1m")
+                      h = tk.history(period="2d", interval="1d")
                       if len(h):
                           p = float(h["Close"].iloc[-1])
                           t = int(h.index[-1].timestamp())
                           st = ""
+                          if pc is None and len(h) >= 2:
+                              pc = float(h["Close"].iloc[-2])
                   except Exception as e:
                       print(s, "history ->", e)
               if p and p > 0:
                   if not t:
                       t = int(time.time())
-                  fuori[s] = {"p": round(p, 4), "t": t, "st": st, "cur": cur}
-                  print("ok", s, round(p, 4))
+                  voce = {"p": round(p, 4), "t": t, "st": st, "cur": cur}
+                  if pc and pc > 0:
+                      voce["pc"] = round(pc, 4)
+                  fuori[s] = voce
+                  print("ok", s, round(p, 4), "(pc=" + str(pc) + ")")
               else:
                   print("FALLITO", s)
               time.sleep(1)
