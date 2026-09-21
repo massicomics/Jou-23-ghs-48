@@ -308,8 +308,8 @@ var qt, qc='p3';
 if(ts){
 var eta=(Date.now()/1000)-ts.t;
 qt=quando(ts.t);
-if(ts.st==='REGULAR'){ qt+=' \u00b7 live'; qc='p3 live'; }
-if(eta>4*3600) qc='p3 vecchio';
+if(ts.st==='REGULAR' && eta<=1200){ qt+=' \u00b7 live'; qc='p3 live'; }
+else if(eta>4*3600){ qt+=' \u00b7 fermo'; qc='p3 vecchio'; }
 } else {
 qt=(p.nota||'')+' \u00b7 non aggiornato'; qc='p3 vecchio';
 }
