@@ -2,11 +2,15 @@ name: Prezzi
 
 on:
   schedule:
-    - cron: '*/10 7-22 * * 1-5'
+    - cron: '7,17,27,37,47,57 7-22 * * 1-5'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: prezzi-update
+  cancel-in-progress: false
 
 jobs:
   aggiorna:
