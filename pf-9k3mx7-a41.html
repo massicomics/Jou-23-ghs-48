@@ -218,7 +218,7 @@ input[type=number]{width:66px;padding:5px;font-size:13px}
 </main>
 <script>
 var POS=[
-{t:"Prysmian",m:"Milano",n:95,c:130.789,cur:"EUR",v:12425,sym:"PRY.MI",px0:121.40,nota:"31/08 in giornata",dt:"17 e 21/08"},
+{t:"Prysmian",m:"Milano",n:46,c:130.789,cur:"EUR",v:6016,sym:"PRY.MI",px0:121.40,nota:"31/08 in giornata",dt:"17 e 21/08"},
 {t:"Amazon",m:"Nasdaq",n:50,c:233.52,cur:"USD",v:11676,cu:270.883,sym:"AMZN",px0:266.43,nota:"28/08 22:00",dt:"17/08"},
 {t:"Netflix",m:"Nasdaq",n:125,c:68.744,cur:"USD",v:8593,cu:80.430,sym:"NFLX",px0:81.72,nota:"28/08 22:00",dt:"20/08"},
 {t:"AstraZeneca",m:"NYSE",n:50,c:138.10,cur:"USD",v:6905,cu:160.196,sym:"AZN",px0:162.70,nota:"28/08 22:00",dt:"17/08"},
@@ -227,14 +227,16 @@ var POS=[
 {t:"Vir",m:"Nasdaq",n:300,c:10.101,cur:"USD",v:3030,cu:11.70,sym:"VIR",px0:11.70,nota:"02/09 carico",dt:"02/09"},
 {t:"Micron",m:"Nasdaq",n:4,c:824.484,cur:"USD",v:3298,cu:955.0,sym:"MU",px0:955.0,nota:"02/09 carico",dt:"02/09"},
 {t:"Aurinia",m:"Nasdaq",n:200,c:13.900,cur:"USD",v:2780,cu:16.10,sym:"AUPH",px0:16.10,nota:"09/09 carico",dt:"09/09"},
-{t:"Elmet",m:"Nasdaq",n:75,c:19.858,cur:"USD",v:1490,cu:23.00,sym:"ELMT",px0:23.00,nota:"17/09 carico",dt:"17/09"}
+{t:"Elmet",m:"Nasdaq",n:75,c:19.858,cur:"USD",v:1490,cu:23.00,sym:"ELMT",px0:23.00,nota:"17/09 carico",dt:"17/09"},
+{t:"Absci",m:"Nasdaq",n:140,c:8.892,cur:"USD",v:1245,cu:10.30,sym:"ABSI",px0:10.30,nota:"23/09 carico",dt:"23/09"},
+{t:"Pulse Biosciences",m:"Nasdaq",n:25,c:47.483,cur:"USD",v:1187,cu:55.00,sym:"PLSE",px0:55.00,nota:"23/09 carico",dt:"23/09"}
 ];
 var FX0=1.1583;
-var INV=58147;
+var INV=54170;
 var TESI=[
 {t:"Prysmian",d:"Elettrificazione delle reti e data center. Guidance 2026 alzata a 2,85 mld di EBITDA, leva bassa a 0,8x, ROE 22,7%, PEG 0,28. Digital Solutions al 24% di margine, capacit&agrave; USA in raddoppio entro il 2029.",
 e:"Rallentamento del capex sulle reti negli Stati Uniti.",
-n:"Acquistata in due tempi: 75 a 132,65 il 17/8 e 20 a 123,80 il 21/8. Mediata al ribasso su una discesa da rotazione settoriale, non su un peggioramento dei fondamentali. Nota 14-15/9: forte volatilit&agrave; per sell-off macro (petrolio, rendimenti Treasury, rallentamento AI) e per l'aumento di capitale riservato completato l'11/9 (diluizione 2,34-2,40%); nessun cambiamento nella tesi di fondo."},
+n:"Acquistata in due tempi: 75 a 132,65 il 17/8 e 20 a 123,80 il 21/8. Mediata al ribasso su una discesa da rotazione settoriale, non su un peggioramento dei fondamentali. Nota 14-15/9: forte volatilit&agrave; per sell-off macro (petrolio, rendimenti Treasury, rallentamento AI) e per l'aumento di capitale riservato completato l'11/9 (diluizione 2,34-2,40%); nessun cambiamento nella tesi di fondo. Ridotta il 23/9: vendute 49 azioni (95&rarr;46) per liberare capitale verso ABSI e PLSE; carico medio invariato."},
 {t:"Amazon",d:"AWS cresce del 36,7%, la pi&ugrave; rapida in diciotto trimestri, con backlog da 496 mld e circa il 60% dell'utile operativo di gruppo. P/E forward circa 22.",
 e:"Il ritorno sui 220 miliardi di capex del 2026.",
 n:"Nessun dividendo. Il capex &egrave; stato alzato anche per i costi della memoria."},
@@ -261,7 +263,13 @@ e:"Esito sfavorevole della claim construction nella causa brevetti consolidata c
 n:"Comprate 200 azioni a 16,10 $ il 9/9/2026, dopo un mese di consolidamento laterale post-accordo Teva (19/8: brevetti riconosciuti validi, generico bloccato fino al dicembre 2036 &mdash; un solo fronte legale su sei risolto). Cambio completo del vertice il 23/3/2026 (Kevin Tang succede a Peter Greenleaf come CEO, transizione ordinata). Rischio strutturale di fondo: dipendenza quasi totale da un solo farmaco commerciale. Prossima trimestrale: 6 novembre 2026."},
 {t:"Elmet (ELMT)",d:"Unico produttore USA verticalmente integrato di tungsteno e molibdeno, materiali critici per difesa, aerospaziale, semiconduttori. Contratto IDIQ con la Defense Logistics Agency: tetto fino a 2 mld$, 150 mln$ garantiti almeno fino al 2031. Insider ownership 66,32%, Insider Transactions +0,06% (sostanzialmente piatto, nessuna vendita in corso). EPS this Year +39,68%.",
 e:"Perdita di un contratto governativo chiave o segnali di cancellazione/sospensione; emergere di problemi concreti sui controlli interni finanziari (non solo dichiarati nel prospetto); comportamento anomalo di insider in vista della scadenza lock-up.",
-n:"IPO recentissima (24 aprile 2026, prezzo 14$, proventi 125,5 mln$). Prima posizione comprata (2.000$) e rivenduta dopo ~20 minuti in perdita di 300-400$ il 15/9, giornata di forte volatilit&agrave; macro (petrolio, rendimenti, riunione Fed). RICOMPRATA il 17/9: 75 azioni a 23$ di carico. Flottante pubblico minuscolo (10,26 mln azioni) &mdash; volatilit&agrave; infragiornaliera estrema attesa. Rischio calendarizzato concreto: scadenza lock-up IPO stimata attorno al 21 ottobre 2026 (180 giorni standard da IPO), da ricontrollare prima di quella data. Prospetto dichiara esplicitamente \"material weaknesses in internal controls\"."}
+n:"IPO recentissima (24 aprile 2026, prezzo 14$, proventi 125,5 mln$). Prima posizione comprata (2.000$) e rivenduta dopo ~20 minuti in perdita di 300-400$ il 15/9, giornata di forte volatilit&agrave; macro (petrolio, rendimenti, riunione Fed). RICOMPRATA il 17/9: 75 azioni a 23$ di carico. Flottante pubblico minuscolo (10,26 mln azioni) &mdash; volatilit&agrave; infragiornaliera estrema attesa. Rischio calendarizzato concreto: scadenza lock-up IPO stimata attorno al 21 ottobre 2026 (180 giorni standard da IPO), da ricontrollare prima di quella data. Prospetto dichiara esplicitamente \"material weaknesses in internal controls\"."},
+{t:"Absci (ABSI)",d:"Piattaforma AI (Atlas) per il design generativo di anticorpi. Partnership e investimento strategico da 40 mln$ di Eli Lilly (agosto 2026) pi&ugrave; round di finanziamento da 100 mln$, cassa fino a H2 2028. ABS-201 (alopecia androgenetica + endometriosi): dati di Fase I positivi, mercato target 25 mld$+. Short interest 24,8% del flottante, 8,26 giorni di copertura &mdash; il pi&ugrave; alto fra i candidati esaminati il 23/9.",
+e:"Dato clinico deludente o ritardato su ABS-201 (readout atteso H2 2026), oppure chiusura sotto la SMA50 con volume sopra media.",
+n:"Comprate 140 azioni a 10,30$ il 23/9/2026. Posizione a orizzonte breve (1-3 mesi), non tesi a lungo termine come le altre: obiettivo esplicito, catalizzatore trimestrale atteso 10-12 novembre 2026 e potenziale squeeze tecnico. Zero fatturato crescente (sales TTM in calo 21%/10% su 3-5 anni): il movimento dipende da sentiment e newsflow, non da numeri &mdash; rischio accettato consapevolmente."},
+{t:"Pulse Biosciences (PLSE)",d:"Bioelettronica medica, tecnologia proprietaria nsPFA (CellFX) per ablazione. Trial pivotale NANOPULSE-AF (fibrillazione atriale) atteso completarsi a inizio Q4 2026, anticipato rispetto a fine 2026; disegno bayesiano fino a 30 centri e ~215 pazienti per accelerare la richiesta PMA e la sottomissione CE. Short interest 14,8% del flottante, 6,4 giorni di copertura.",
+e:"Ritardo ufficiale del completamento del trial NANOPULSE-AF, oppure perdita della SMA50 in chiusura.",
+n:"Comprate 25 azioni a 55$ il 23/9/2026. Posizione a orizzonte breve (1-3 mesi). Prossima trimestrale confermata 16/11/2026. Prezzo gi&agrave; -10% dal massimo di 52 settimane al momento dell'acquisto: gran parte del movimento verticale &egrave; probabilmente gi&agrave; avvenuto. Valutazione completamente scollegata dai fondamentali attuali (P/S oltre 3.000, sales TTM 1,19 mln$): la tesi regge solo sull'esito del trial, non su numeri di bilancio."}
 ];
 var REGOLE=[
 ["Niente stop loss","Sono tesi fondamentali a 3-5 anni: la protezione &egrave; la trimestrale, non il prezzo. Lo stop &egrave; uno strumento da trading."],
